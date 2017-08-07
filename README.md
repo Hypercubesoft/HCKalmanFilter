@@ -14,7 +14,7 @@
 
 ## Installing
 
-[CocoaPods](https://cocoapods.org/) is a dependency manager for Objective-C ans Swift, which automates and simplifies the process of using 3rd-party libraries like HCKalmanFilter in your projects.
+[CocoaPods](https://cocoapods.org/) is a dependency manager for Objective-C and Swift, which automates and simplifies the process of using 3rd-party libraries like HCKalmanFilter in your projects.
 
 ### Podfile
 
@@ -22,7 +22,8 @@ To integrate **HCKalmanFilter** into your Xcode project using CocoaPods, specify
 
 ```
 target 'TargetName' do
-pod 'HCKalmanFilter'
+  use_frameworks!
+  pod 'HCKalmanFilter'
 end
 ```
 
