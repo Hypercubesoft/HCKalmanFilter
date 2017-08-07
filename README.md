@@ -2,13 +2,13 @@
 [![License](https://img.shields.io/cocoapods/l/HCKalmanFilter.svg?style=flat)](http://cocoapods.org/pods/HCKalmanFilter)
 [![Platform](https://img.shields.io/cocoapods/p/HCKalmanFilter.svg?style=flat)](http://cocoapods.org/pods/HCKalmanFilter)
 
-![logo](https://github.com/Hypercubesoft/HCKalmanFilter/Images/HCKalmanFilterLogo.png)
+![logo](https://github.com/Hypercubesoft/HCKalmanFilter/blob/masterImages/HCKalmanFilterLogo.png)
 
 **HCKalmanFilter** is a delightful library for iOS written in **Swift**. HCKalmanFilter library was created for the implementation of Kalman filter algorithm for the problem of GPS tracking and correction of trajectories obtained based on the measurement of the GPS receiver. The problem occurs in the case of a large oscillation of the coordinates received from the GPS receiver when the accuracy is very small or the GPS signal is very bad. If you have this kind of problem and you need a fluid trajectory of movement without big peaks and deviations, this library is the right choice for you.
 
-![screenshot](https://github.com/Hypercubesoft/HCKalmanFilter/Images/Screenshots/HCKalmanFilterSC1.png)
+![screenshot](https://github.com/Hypercubesoft/HCKalmanFilter/blob/master/Images/Screenshots/HCKalmanFilterSC1.png)
 
-![screenshot](https://github.com/Hypercubesoft/HCKalmanFilter/Images/Screenshots/HCKalmanFilterSC2.png)
+![screenshot](https://github.com/Hypercubesoft/HCKalmanFilter/blob/master/Images/Screenshots/HCKalmanFilterSC2.png)
 
 
 ## Getting Started
