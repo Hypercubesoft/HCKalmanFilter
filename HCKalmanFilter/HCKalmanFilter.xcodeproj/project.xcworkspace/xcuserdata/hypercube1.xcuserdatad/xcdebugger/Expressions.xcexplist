@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "MatrixObject.determinant(n : Int, mat : MatrixObject) -&gt; Double:MatrixObject.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "d">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "MatrixObject.inverseMatrix() -&gt; MatrixObject?:MatrixObject.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "n">
+            </PersistentString>
+            <PersistentString
+               value = "2*n-j">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "static MatrixObject.* infix(MatrixObject, MatrixObject) -&gt; MatrixObject?:MatrixObject.swift">
+      </ContextState>
+      <ContextState
+         contextName = "MatrixObject.addElement(i : Int, j : Int, value : Float) -&gt; ():MatrixObject.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.matrix.count">
+            </PersistentString>
+            <PersistentString
+               value = "self.matrix[i].count">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>
