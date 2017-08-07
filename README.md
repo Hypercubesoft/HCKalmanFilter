@@ -40,7 +40,7 @@ $ pod install
 
 ### With source code
 
-Download repository, then add HCKalmanFilter directory to your project.
+Download repository, then add HCKalmanAlgorithm directory to your project.
 
 
 ## Usage
@@ -87,7 +87,7 @@ After calling the restart function, you can continue to **repeat the steps under
 
 ```swift
 var resetKalmanFilter: Bool = false
-var hcKalmanFilter: KalmanAlgorithm?
+var hcKalmanFilter: HCKalmanAlgorithm?
 
 ...
 
@@ -96,7 +96,7 @@ func locationManager(_ manager: CLLocationManager, didUpdateLocations locations:
     var myLocation: CLLocation = locations.first!
     
     if hcKalmanFilter == nil {
-       self.hcKalmanFilter = KalmanAlgorithm(initialLocation: myLocation)
+       self.hcKalmanFilter = HCKalmanAlgorithm(initialLocation: myLocation)
     }
     else {
         if let hcKalmanFilter = self.hcKalmanFilter {
