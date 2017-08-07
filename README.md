@@ -1,7 +1,3 @@
-[![CocoaPods Compatible](https://img.shields.io/cocoapods/v/HCKalmanFilter.svg)](http://cocoapods.org/pods/HCKalmanFilter)
-[![License](https://img.shields.io/cocoapods/l/HCKalmanFilter.svg?style=flat)](http://cocoapods.org/pods/HCKalmanFilter)
-[![Platform](https://img.shields.io/cocoapods/p/HCKalmanFilter.svg?style=flat)](http://cocoapods.org/pods/HCKalmanFilter)
-
 ![logo](https://github.com/Hypercubesoft/HCKalmanFilter/blob/master/Images/HCKalmanFilterLogo.png)
 
 **HCKalmanFilter** is a delightful library for iOS written in **Swift**. HCKalmanFilter library was created for the implementation of Kalman filter algorithm for the problem of GPS tracking and correction of trajectories obtained based on the measurement of the GPS receiver. The problem occurs in the case of a large oscillation of the coordinates received from the GPS receiver when the accuracy is very small or the GPS signal is very bad. If you have this kind of problem and you need a fluid trajectory of movement without big peaks and deviations, this library is the right choice for you.
@@ -13,7 +9,7 @@
 
 ## Getting Started
 
-* [Download HCKalmanFilter project]() and try out the included iPhone example app
+* Download HCKalmanFilter project and try out the included iPhone example app
 * Read the Installation guide, Usage guide, or [other articles on the Wiki about Kalman Filter Algorithm](https://en.wikipedia.org/wiki/Kalman_filter)
 
 ## Installing
@@ -38,7 +34,7 @@ $ pod install
 
 ### With source code
 
-[Download repository](), then add HCKalmanFilter directory to your project.
+Download repository, then add HCKalmanFilter directory to your project.
 
 
 ## Usage
@@ -55,22 +51,20 @@ let hcKalmanFilter = HCKalmanAlgorithm(initialLocation: myInitialLocation)
 ```
 * **myInitialLocation** is the location where the tracking starts.
 
---
+
 **3.** if necessary, it is possible to correct the value of the **rValue** parameter. **rValue** parameter is value for Sensor Noise Covariance Matrix. The default value is 29.0, this is the recommended value for the GPS problem, with this value filter provides optimal accuracy. This value can be adjusted depending on the needs, the higher value of **rVaule** variable will give greater roundness trajectories, and vice versa.
 
 ```swift
 hcKalmanFilter.rValue = 35.0
 ```
---
+
 **4.** After initialization and eventual correction of **rValue** parameter, after each next measurement of the coordinates from the GPS receiver, it is necessary to call **processState** function of the HCKalmanFilter object with current coordinates.
 
 ```swift
 let kalmanLocation = hcKalmanFilter.processState(currentLocation: myCurrentLocation)
 ```
 * **currentLocation** is CLLocation object which represents the actual coordinates received from the GPS receiver.
-* **kalmanLocation** is CLLocation object which represents coordinates obtained by processing **currentLocation** with HCKalmanFilter algorithm. You can now use the corrected coordinates for further purposes (for example, to plot the path of the object you are tracking...)
-
--- 
+* **kalmanLocation** is CLLocation object which represents coordinates obtained by processing **currentLocation** with HCKalmanFilter algorithm. You can now use the corrected coordinates for further purposes (for example, to plot the path of the object you are tracking...) 
 
 **5.** In case you need to stop tracking and then restart it, it is necessary to call **resetKalman** function with new start location, before continuing with the processing of the measured coordinates.
 
@@ -82,7 +76,7 @@ hcKalmanFilter.resetKalman(newStartLocation: myNewStartLocation)
 
 After calling the restart function, you can continue to **repeat the steps under the number 4**.
 
---
+
 ### Example of usage
 
 ```swift
