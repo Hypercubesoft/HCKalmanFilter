@@ -101,7 +101,7 @@ func locationManager(_ manager: CLLocationManager, didUpdateLocations locations:
     else {
         if let hcKalmanFilter = self.hcKalmanFilter {
             if resetKalmanFilter == true {
-                kalmanFilter.resetKalman(newStartLocation: myLocation)
+                hcKalmanFilter.resetKalman(newStartLocation: myLocation)
                 resetKalmanFilter = false
             }
             else {
