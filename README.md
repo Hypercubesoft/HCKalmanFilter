@@ -116,6 +116,6 @@ func locationManager(_ manager: CLLocationManager, didUpdateLocations locations:
 
 ## Credits
 
-**HCKalmanFilter** is owned and maintained by the [Hypercube Soft](http://hypercubesoft.com/).
+**HCKalmanFilter** is owned and maintained by the [Hypercube](http://hypercubesoft.com/).
 
 If you find any bug, please report it, and we will try to fix it ASAP.
