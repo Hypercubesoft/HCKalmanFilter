@@ -1,6 +1,6 @@
 //
 //  HCKalmanAlgorithm.swift
-//  KlamanFilter
+//  HCKalmanFilter
 //
 //  Created by Hypercube on 4/27/17.
 //  Copyright © 2017 Hypercube. All rights reserved.

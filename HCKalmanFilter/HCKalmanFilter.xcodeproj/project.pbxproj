@@ -32,10 +32,7 @@
 		45475E441F34B013004DBC8E /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		45475E461F34B013004DBC8E /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		45FC375C1EB07118008FADC3 /* HCKalmanFilter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HCKalmanFilter.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		69CD6B86FBA1B83EF7CA0ED1 /* Pods-KalmanFilter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KalmanFilter.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KalmanFilter/Pods-KalmanFilter.debug.xcconfig"; sourceTree = "<group>"; };
 		7BEB2F7993A99A42A7401C18 /* Pods-HCKalmanFilter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HCKalmanFilter.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HCKalmanFilter/Pods-HCKalmanFilter.debug.xcconfig"; sourceTree = "<group>"; };
-		9EF94B54E13C8CCCD6278488 /* Pods-KalmanFilter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KalmanFilter.release.xcconfig"; path = "Pods/Target Support Files/Pods-KalmanFilter/Pods-KalmanFilter.release.xcconfig"; sourceTree = "<group>"; };
-		A4A5040CDF811FE4CF0DE9C4 /* Pods_KalmanFilter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KalmanFilter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3AF6DA56FCFC33A9DBF93BF /* Pods-HCKalmanFilter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HCKalmanFilter.release.xcconfig"; path = "Pods/Target Support Files/Pods-HCKalmanFilter/Pods-HCKalmanFilter.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -54,8 +51,6 @@
 		32E9E7003245A6085038078F /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				69CD6B86FBA1B83EF7CA0ED1 /* Pods-KalmanFilter.debug.xcconfig */,
-				9EF94B54E13C8CCCD6278488 /* Pods-KalmanFilter.release.xcconfig */,
 				7BEB2F7993A99A42A7401C18 /* Pods-HCKalmanFilter.debug.xcconfig */,
 				D3AF6DA56FCFC33A9DBF93BF /* Pods-HCKalmanFilter.release.xcconfig */,
 			);
@@ -132,7 +127,6 @@
 		803048EA6D83692E34240A68 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				A4A5040CDF811FE4CF0DE9C4 /* Pods_KalmanFilter.framework */,
 				08C563921F5AEC3C0A32DD3D /* Pods_HCKalmanFilter.framework */,
 			);
 			name = Frameworks;
@@ -401,7 +395,7 @@
 				DEVELOPMENT_TEAM = E5FYD94489;
 				INFOPLIST_FILE = "$(SRCROOT)/HCKalmanFilter/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.hypercubesoft.HCKlamanFilter;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hypercubesoft.HCKalmanFilter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -416,7 +410,7 @@
 				DEVELOPMENT_TEAM = E5FYD94489;
 				INFOPLIST_FILE = "$(SRCROOT)/HCKalmanFilter/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.hypercubesoft.HCKlamanFilter;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hypercubesoft.HCKalmanFilter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;

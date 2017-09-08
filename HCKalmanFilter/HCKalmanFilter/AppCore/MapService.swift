@@ -1,6 +1,6 @@
 //
 //  MapService.swift
-//  KlamanFilter
+//  HCKalmanFilter
 //
 //  Created by Hypercube on 1/19/17.
 //  Copyright © 2017 Hypercube. All rights reserved.

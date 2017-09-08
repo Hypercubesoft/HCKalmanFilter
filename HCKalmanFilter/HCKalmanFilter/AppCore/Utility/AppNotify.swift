@@ -1,6 +1,6 @@
 //
 //  AppNotify.swift
-//  KlamanFilter
+//  HCKalmanFilter
 //
 //  Created by Hypercube on 12/16/16.
 //  Copyright © 2016 Hypercube. All rights reserved.
