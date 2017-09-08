@@ -14,7 +14,7 @@ s.license          = { :type => "MIT", :file => "LICENSE" }
 s.author           = { "Hypercubesoft" => "office@hypercubesoft.com" }
 s.source           = { :git => "https://github.com/Hypercubesoft/HCKalmanFilter.git", :tag => "#{s.version}"}
 
-s.ios.deployment_target = "10.0"
+s.ios.deployment_target = "8.0"
 s.source_files = "HCKalmanFilter/HCKalmanFilter/HCKalmanAlgorithm/*"
 
 end
