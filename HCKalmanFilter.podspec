@@ -2,7 +2,7 @@ Pod::Spec.new do |s|
 
 s.platform = :ios
 s.name             = "HCKalmanFilter"
-s.version          = "1.0.0"
+s.version          = "1.0.1"
 s.summary          = "HCKalmanFilter is Swift implementation of Kalman filter algorithm intended to solve problem with GPS tracking"
 
 s.description      = <<-DESC
