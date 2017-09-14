@@ -182,8 +182,8 @@ open class HCKalmanAlgorithm
         // Calculate and set Prediction Step Matrix based on new timeInterval value
         A.setMatrix(matrix: [[1,Double(timeInterval),0,0],[0,1,0,0],[0,0,1,Double(timeInterval)],[0,0,0,1]])
         
-        // Calculate and set Acceleration Noise Magnitude Matrix based on new timeInterval and sigma values
-        Qt.setMatrix(matrix: [[sigma*(Double(pow(Double(timeInterval), Double(4)))/4.0),sigma*(Double(pow(Double(timeInterval), Double(3)))/2.0),0,0],[sigma*(Double(pow(Double(timeInterval), Double(3)))/2.0),sigma*(Double(pow(Double(timeInterval), Double(2)))),0,0],[0,0,sigma*(Double(pow(Double(timeInterval), Double(4)))/4.0),sigma*(Double(pow(Double(timeInterval), Double(3)))/2.0)],[0,0,sigma*(Double(pow(Double(timeInterval), Double(3)))/2.0),sigma*(Double(pow(Double(timeInterval), Double(2))))]])
+        // Set Acceleration Noise Magnitude Matrix based on new timeInterval and sigma values
+        Qt.setMatrix(matrix: self.accelerationNoiseMagnitudeMatrix(timeInterval))
         
         // Calculate velocity components separated by the axes (x and y). 
         // This is value of velocity between previous and current location.
@@ -200,6 +200,17 @@ open class HCKalmanAlgorithm
         
         // Return value of kalmanFilter
         return self.kalmanFilter()
+    }
+    
+    /// Calculate Acceleration Noise Magnitude Matrix based on new timeInterval and sigma values
+    private func accelerationNoiseMagnitudeMatrix(_ timeInterval:TimeInterval) -> [[Double]]
+    {
+        var matrix = [[Double]]()
+        matrix.append([sigma*(Double(pow(Double(timeInterval), Double(4)))/4.0),sigma*(Double(pow(Double(timeInterval), Double(3)))/2.0),0,0])
+        matrix.append([sigma*(Double(pow(Double(timeInterval), Double(3)))/2.0),sigma*(Double(pow(Double(timeInterval), Double(2)))),0,0])
+        matrix.append([0,0,sigma*(Double(pow(Double(timeInterval), Double(4)))/4.0),sigma*(Double(pow(Double(timeInterval), Double(3)))/2.0)])
+        matrix.append([0,0,sigma*(Double(pow(Double(timeInterval), Double(3)))/2.0),sigma*(Double(pow(Double(timeInterval), Double(2))))])
+        return matrix
     }
     
     /// Kalman Filter Function
