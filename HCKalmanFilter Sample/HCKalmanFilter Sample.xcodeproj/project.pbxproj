@@ -11,8 +11,6 @@
 		A5D3597D1F713FD400B436D5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5B6E3321F713EE700992EC9 /* Assets.xcassets */; };
 		A5D3597E1F713FDA00B436D5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5B6E3331F713EE700992EC9 /* LaunchScreen.storyboard */; };
 		A5D3597F1F713FDE00B436D5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5B6E3351F713EE700992EC9 /* Main.storyboard */; };
-		A5D359801F713FE200B436D5 /* HCKalmanAlgorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B6E3381F713EE700992EC9 /* HCKalmanAlgorithm.swift */; };
-		A5D359811F713FE200B436D5 /* HCMatrixObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B6E3391F713EE700992EC9 /* HCMatrixObject.swift */; };
 		A5D359821F713FE500B436D5 /* MapService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B6E32E1F713EE700992EC9 /* MapService.swift */; };
 		A5D359831F713FE900B436D5 /* AppNotify.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B6E3301F713EE700992EC9 /* AppNotify.swift */; };
 		A5D359861F71409C00B436D5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B6E33C1F713EE700992EC9 /* ViewController.swift */; };
@@ -27,10 +25,10 @@
 		A5B6E3321F713EE700992EC9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A5B6E3341F713EE700992EC9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A5B6E3361F713EE700992EC9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		A5B6E3381F713EE700992EC9 /* HCKalmanAlgorithm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HCKalmanAlgorithm.swift; sourceTree = "<group>"; };
-		A5B6E3391F713EE700992EC9 /* HCMatrixObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HCMatrixObject.swift; sourceTree = "<group>"; };
 		A5B6E33A1F713EE700992EC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A5B6E33C1F713EE700992EC9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A5B6E33E1F714DD600992EC9 /* HCKalmanAlgorithm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HCKalmanAlgorithm.swift; sourceTree = "<group>"; };
+		A5B6E33F1F714DD600992EC9 /* HCMatrixObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HCMatrixObject.swift; sourceTree = "<group>"; };
 		A5D359671F713E7700B436D5 /* HCKalmanFilter Sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HCKalmanFilter Sample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6B8992241A1B19268154754 /* Pods_HCKalmanFilter_Sample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HCKalmanFilter_Sample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0C344FD58BC0A34FD7B844F /* Pods-HCKalmanFilter Sample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HCKalmanFilter Sample.release.xcconfig"; path = "Pods/Target Support Files/Pods-HCKalmanFilter Sample/Pods-HCKalmanFilter Sample.release.xcconfig"; sourceTree = "<group>"; };
@@ -65,7 +63,7 @@
 				A5B6E3321F713EE700992EC9 /* Assets.xcassets */,
 				A5B6E3331F713EE700992EC9 /* LaunchScreen.storyboard */,
 				A5B6E3351F713EE700992EC9 /* Main.storyboard */,
-				A5B6E3371F713EE700992EC9 /* HCKalmanFilter */,
+				A5B6E33D1F714DD600992EC9 /* HCKalmanFilter */,
 				A5B6E33A1F713EE700992EC9 /* Info.plist */,
 				A5B6E33B1F713EE700992EC9 /* ViewControllers */,
 			);
@@ -89,21 +87,22 @@
 			path = Utility;
 			sourceTree = "<group>";
 		};
-		A5B6E3371F713EE700992EC9 /* HCKalmanFilter */ = {
-			isa = PBXGroup;
-			children = (
-				A5B6E3381F713EE700992EC9 /* HCKalmanAlgorithm.swift */,
-				A5B6E3391F713EE700992EC9 /* HCMatrixObject.swift */,
-			);
-			path = HCKalmanFilter;
-			sourceTree = "<group>";
-		};
 		A5B6E33B1F713EE700992EC9 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
 				A5B6E33C1F713EE700992EC9 /* ViewController.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		A5B6E33D1F714DD600992EC9 /* HCKalmanFilter */ = {
+			isa = PBXGroup;
+			children = (
+				A5B6E33E1F714DD600992EC9 /* HCKalmanAlgorithm.swift */,
+				A5B6E33F1F714DD600992EC9 /* HCMatrixObject.swift */,
+			);
+			name = HCKalmanFilter;
+			path = ../../HCKalmanFilter;
 			sourceTree = "<group>";
 		};
 		A5D3595E1F713E7600B436D5 = {
@@ -268,8 +267,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				A5D359861F71409C00B436D5 /* ViewController.swift in Sources */,
-				A5D359811F713FE200B436D5 /* HCMatrixObject.swift in Sources */,
-				A5D359801F713FE200B436D5 /* HCKalmanAlgorithm.swift in Sources */,
 				A5D359821F713FE500B436D5 /* MapService.swift in Sources */,
 				A5D3597C1F713FD200B436D5 /* AppDelegate.swift in Sources */,
 				A5D359831F713FE900B436D5 /* AppNotify.swift in Sources */,
