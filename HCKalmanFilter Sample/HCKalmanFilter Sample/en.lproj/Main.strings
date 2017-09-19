@@ -1,0 +1,12 @@
+
+/* Class = "UILabel"; text = "Add random error : NO"; ObjectID = "M6M-nN-Cn9"; */
+"M6M-nN-Cn9.text" = "Add random error : NO";
+
+/* Class = "UIButton"; normalTitle = "Start tracking"; ObjectID = "fml-6i-vlY"; */
+"fml-6i-vlY.normalTitle" = "Start tracking";
+
+/* Class = "UIButton"; normalTitle = "Clear All Paths"; ObjectID = "lZl-95-pzn"; */
+"lZl-95-pzn.normalTitle" = "Clear All Paths";
+
+/* Class = "UILabel"; text = "GPS Accuracy : Best for Navigation"; ObjectID = "r49-g8-i7e"; */
+"r49-g8-i7e.text" = "GPS Accuracy : Best for Navigation";

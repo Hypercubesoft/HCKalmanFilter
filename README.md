@@ -11,10 +11,33 @@
 
 ![screenshot](https://github.com/Hypercubesoft/HCKalmanFilter/blob/master/Images/Screenshots/HCKalmanFilterSC2.png)
 
+## Change Log
+
+# 1.1.0
+
+In this version we added another new functionality in addition to small bug fixes. 
+
+At the request of the HCKalmanFilter library user, we decided that in addition to the correction values for latitude and latitude, we should add the correction of the **altitude**.
+
+Now you can easily get the corrected value for altitude in the following way:
+
+```swift
+...
+let kalmanLocation = hcKalmanFilter.processState(currentLocation: myLocation)
+print(kalmanLocation.altitude)
+...
+
+```
 
 ## Getting Started
 
-* Download HCKalmanFilter project and try out the included iPhone example app
+* Download HCKalmanFilter Sample project, open HCKalmanFilter Sample folder via Terminal and run the following command:
+
+    ```
+    $ pod install
+    ```
+    This will install all necessary dependencies for this sample project. After you have installed all necessary dependencies, open HCKalmanFilter Sample.xcworkspace and try out the included iPhone example app.
+
 * Read the Installation guide, Usage guide, or [other articles on the Wiki about Kalman Filter Algorithm](https://en.wikipedia.org/wiki/Kalman_filter)
 
 ## Installing

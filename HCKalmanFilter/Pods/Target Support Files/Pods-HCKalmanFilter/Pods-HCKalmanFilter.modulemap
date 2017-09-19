@@ -1,6 +1,0 @@
-framework module Pods_HCKalmanFilter {
-  umbrella header "Pods-HCKalmanFilter-umbrella.h"
-
-  export *
-  module * { export * }
-}

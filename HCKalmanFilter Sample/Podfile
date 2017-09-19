@@ -1,0 +1,15 @@
+# Uncomment the next line to define a global platform for your project
+platform :ios, '9.0'
+
+target 'HCKalmanFilter Sample' do
+    
+    pod 'GoogleMaps'
+    pod 'GooglePlaces'
+    pod 'GooglePlacePicker'
+    
+    pod 'ActionSheetPicker-3.0', '~> 2.2.0'
+    
+    source 'https://github.com/CocoaPods/Specs.git'
+    use_frameworks!
+end
+
