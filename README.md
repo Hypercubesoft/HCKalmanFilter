@@ -38,7 +38,7 @@ end
 $ pod install
 ```
 
-### With source code
+### 直接使用源代码
 
 下载本资源库, 然后把 HCKalmanAlgorithm 目录添加到你的项目里。
 
@@ -58,7 +58,7 @@ let hcKalmanFilter = HCKalmanAlgorithm(initialLocation: myInitialLocation)
 * **myInitialLocation** 是轨迹的开始位置.
 
 
-**3.** 调整 **rValue** 参数（若有必要）. **rValue** 参数 用于 噪声协方差矩阵. 默认值是29.0, 这是解决GPS 问题的推荐值, 用这个值可以提供最理想的精确度。但是你可以根据需要来调整这个值, 越高的 **rVaule** 参数越能提供更加平滑的轨迹，反之亦然。
+**3.** 调整 **rValue** 参数（若有必要）。**rValue** 参数 用于 噪声协方差矩阵。默认值是29.0, 这是解决GPS 问题的推荐值, 用这个值可以提供最理想的精确度。但是你可以根据需要来调整这个值, 越高的 **rVaule** 值越能提供更加平滑的轨迹，反之亦然。
 
 ```swift
 hcKalmanFilter.rValue = 35.0
@@ -69,16 +69,16 @@ hcKalmanFilter.rValue = 35.0
 ```swift
 let kalmanLocation = hcKalmanFilter.processState(currentLocation: myCurrentLocation)
 ```
-* **currentLocation** 是CLLocation，代表从GPS接收器收到的当前实际坐标.
-* **kalmanLocation** 是一个CLLocation对象，是HCKalmanFilter算法对 **currentLocation** 经过计算后的坐标。然后你可以进一步使用这个修正过的坐标（ (比如在地图上画轨迹) 
+* **currentLocation** 是一个CLLocation对象，表示从GPS接收器收到的当前实际坐标.
+* **kalmanLocation** 是一个CLLocation对象，是HCKalmanFilter算法对 **currentLocation** 经过计算后的修正坐标。你接下来可以进一步使用这个修正过的坐标（ (比如在地图上画轨迹) 。
 
-**5.** 当你需要结束先前的轨迹并重新开始一段新轨迹的时候, 需要根据这次的开始位置调用**resetKalman** 方法, 然后再继续调用processState。
+**5.** 当你需要结束先前的轨迹并重新开始一段新轨迹的时候, 需要根据当前的位置调用**resetKalman** 方法, 然后再继续调用processState。
 
 ```swift
 hcKalmanFilter.resetKalman(newStartLocation: myNewStartLocation)
 ```
 
-* **myNewStartLocation** 是 CLLocation 对象，表示重新开始该算法时从GPS接收器接收到的当前坐标。
+* **myNewStartLocation** 是一个CLLocation 对象，表示重新开始该算法时从GPS接收器接收到的当前坐标。
 调用上述函数后, 你可以继续 **第 4 步**的动作。
 
 
