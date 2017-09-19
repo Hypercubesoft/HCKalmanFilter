@@ -5,7 +5,7 @@
 
 ![logo](https://github.com/Hypercubesoft/HCKalmanFilter/blob/master/Images/HCKalmanFilterLogo.png)
 
-**HCKalmanFilter** 是用 **Swift** 语言开发的开尔曼滤波算法的iOS实现库. HCKalmanFilter 库实现的开尔曼滤波算法用于处理从GPS接收器收到到的测量信号所画出的GPS轨迹的修正问题。该问题产生于当GPS信号差或精度太小时，GPS接收器接收到的坐标会产生大幅震荡的情况。如果你有类似问题或你需要一个柔顺丝滑的轨迹时，那么这个库就是你的正确选择。
+**HCKalmanFilter** 是用 **Swift** 语言开发的卡尔曼滤波算法的iOS实现库. HCKalmanFilter 库实现的卡尔曼滤波算法用于处理从GPS接收器收到到的测量信号所画出的GPS轨迹的修正问题。该问题产生于当GPS信号差或精度太小时，GPS接收器接收到的坐标会产生大幅震荡的情况。如果你有类似问题或你需要一个柔顺丝滑的轨迹时，那么这个库就是你的正确选择。
 
 ![screenshot](https://github.com/Hypercubesoft/HCKalmanFilter/blob/master/Images/Screenshots/HCKalmanFilterSC1.png)
 
