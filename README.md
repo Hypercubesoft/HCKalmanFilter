@@ -17,7 +17,7 @@
 
 In this version we added another new functionality in addition to small bug fixes. 
 
-At the request of the HCKalmanFilter library user, we decided that in addition to the correction values for latitude and latitude, we should add the correction of the **altitude**.
+At the request of the HCKalmanFilter library user, we decided that in addition to the correction values for latitude and longitude, we should add the correction of the **altitude**.
 
 Now you can easily get the corrected value for altitude in the following way:
 
