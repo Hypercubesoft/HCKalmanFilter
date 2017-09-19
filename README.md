@@ -5,7 +5,7 @@
 
 ![logo](https://github.com/Hypercubesoft/HCKalmanFilter/blob/master/Images/HCKalmanFilterLogo.png)
 
-**HCKalmanFilter** is a delightful library for iOS written in **Swift**. HCKalmanFilter library was created for the implementation of Kalman filter algorithm for the problem of GPS tracking and correction of trajectories obtained based on the measurement of the GPS receiver. The problem occurs in the case of a large oscillation of the coordinates received from the GPS receiver when the accuracy is very small or the GPS signal is very bad. If you have this kind of problem and you need a fluid trajectory of movement without big peaks and deviations, this library is the right choice for you.
+**HCKalmanFilter** 是用 **Swift** 语言开发的开尔曼滤波算法的iOS实现库. HCKalmanFilter 库实现的开尔曼滤波算法用于处理从GPS接收器收到到的测量信号所画出的GPS轨迹的修正问题。该问题产生于当GPS信号差或精度太小时，GPS接收器接收到的坐标会产生大幅震荡的情况。如果你有类似问题或你需要一个柔顺丝滑的轨迹时，那么这个库就是你的正确选择。
 
 ![screenshot](https://github.com/Hypercubesoft/HCKalmanFilter/blob/master/Images/Screenshots/HCKalmanFilterSC1.png)
 
@@ -14,16 +14,16 @@
 
 ## Getting Started
 
-* Download HCKalmanFilter project and try out the included iPhone example app
-* Read the Installation guide, Usage guide, or [other articles on the Wiki about Kalman Filter Algorithm](https://en.wikipedia.org/wiki/Kalman_filter)
+* 下载 HCKalmanFilter 项目并运行其中包含的实例iPhone App进行体验。
+* 阅读安装向导，使用指南，也可以进一步学习算法本身(https://en.wikipedia.org/wiki/Kalman_filter)
 
 ## Installing
 
-[CocoaPods](https://cocoapods.org/) is a dependency manager for Objective-C and Swift, which automates and simplifies the process of using 3rd-party libraries like HCKalmanFilter in your projects.
+[CocoaPods](https://cocoapods.org/) 是用于Objective-C和Swift的依赖管理器，它可以帮你实现第三方库的安装使用的自动化，简化工作。使用该工具可以把 HCKalmanFilter安装到你的工程中。
 
 ### Podfile
 
-To integrate **HCKalmanFilter** into your Xcode project using CocoaPods, specify it in your Podfile:
+要通过 CocoaPods集成 **HCKalmanFilter** 到你的Xcode项目中，需要在项目的 Podfile文件中加入以下配置语句:
 
 ```
 target 'TargetName' do
@@ -32,7 +32,7 @@ target 'TargetName' do
 end
 ```
 
-Then, run the following command:
+然后执行以下命令:
 
 ```
 $ pod install
@@ -40,50 +40,49 @@ $ pod install
 
 ### With source code
 
-Download repository, then add HCKalmanAlgorithm directory to your project.
+下载本资源库, 然后把 HCKalmanAlgorithm 目录添加到你的项目里。
 
 
-## Usage
-**1.** First import HCKalmanFilter module
+## 用法
+**1.** 首先 import HCKalmanFilter 模块
 
 ```swift
 import HCKalmanFilter
 ```
 
-**2.** After installing and importing Kalman Filter library it is necessary to initialize the HCKalmanFilter object before using it.
+**2.** 初始化 HCKalmanFilter 对象
 
 ```swift
 let hcKalmanFilter = HCKalmanAlgorithm(initialLocation: myInitialLocation)
 ```
-* **myInitialLocation** is the location where the tracking starts.
+* **myInitialLocation** 是轨迹的开始位置.
 
 
-**3.** if necessary, it is possible to correct the value of the **rValue** parameter. **rValue** parameter is value for Sensor Noise Covariance Matrix. The default value is 29.0, this is the recommended value for the GPS problem, with this value filter provides optimal accuracy. This value can be adjusted depending on the needs, the higher value of **rVaule** variable will give greater roundness trajectories, and vice versa.
+**3.** 调整 **rValue** 参数（若有必要）. **rValue** 参数 用于 噪声协方差矩阵. 默认值是29.0, 这是解决GPS 问题的推荐值, 用这个值可以提供最理想的精确度。但是你可以根据需要来调整这个值, 越高的 **rVaule** 参数越能提供更加平滑的轨迹，反之亦然。
 
 ```swift
 hcKalmanFilter.rValue = 35.0
 ```
 
-**4.** After initialization and eventual correction of **rValue** parameter, after each next measurement of the coordinates from the GPS receiver, it is necessary to call **processState** function of the HCKalmanFilter object with current coordinates.
+**4.** 在每一次GPS测量坐标出来后，需要根据当前坐标调用HCKalmanFilter对象的 **processState** 方法。
 
 ```swift
 let kalmanLocation = hcKalmanFilter.processState(currentLocation: myCurrentLocation)
 ```
-* **currentLocation** is CLLocation object which represents the actual coordinates received from the GPS receiver.
-* **kalmanLocation** is CLLocation object which represents coordinates obtained by processing **currentLocation** with HCKalmanFilter algorithm. You can now use the corrected coordinates for further purposes (for example, to plot the path of the object you are tracking...) 
+* **currentLocation** 是CLLocation，代表从GPS接收器收到的当前实际坐标.
+* **kalmanLocation** 是一个CLLocation对象，是HCKalmanFilter算法对 **currentLocation** 经过计算后的坐标。然后你可以进一步使用这个修正过的坐标（ (比如在地图上画轨迹) 
 
-**5.** In case you need to stop tracking and then restart it, it is necessary to call **resetKalman** function with new start location, before continuing with the processing of the measured coordinates.
+**5.** 当你需要结束先前的轨迹并重新开始一段新轨迹的时候, 需要根据这次的开始位置调用**resetKalman** 方法, 然后再继续调用processState。
 
 ```swift
 hcKalmanFilter.resetKalman(newStartLocation: myNewStartLocation)
 ```
 
-* **myNewStartLocation** is CLLocation object which represents the actual coordinates received from the GPS receiver at the moment of restarting the algorithm.
+* **myNewStartLocation** 是 CLLocation 对象，表示重新开始该算法时从GPS接收器接收到的当前坐标。
+调用上述函数后, 你可以继续 **第 4 步**的动作。
 
-After calling the restart function, you can continue to **repeat the steps under the number 4**.
 
-
-### Example of usage
+### 完整示例
 
 ```swift
 var resetKalmanFilter: Bool = false
@@ -116,6 +115,6 @@ func locationManager(_ manager: CLLocationManager, didUpdateLocations locations:
 
 ## Credits
 
-**HCKalmanFilter** is owned and maintained by the [Hypercube](http://hypercubesoft.com/).
+**HCKalmanFilter** 由 [Hypercube](http://hypercubesoft.com/)拥有并负责维护。
 
 If you find any bug, please report it, and we will try to fix it ASAP.
