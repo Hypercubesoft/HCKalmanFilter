@@ -8,6 +8,7 @@
 
 import UIKit
 import GoogleMaps
+import HCKalmanFilter
 
 class MapService: NSObject, CLLocationManagerDelegate
 {
