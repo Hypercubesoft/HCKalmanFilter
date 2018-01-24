@@ -8,6 +8,8 @@ target 'HCKalmanFilter Sample' do
     pod 'GooglePlacePicker'
     
     pod 'ActionSheetPicker-3.0', '~> 2.2.0'
+
+    pod 'Surge', '~> 2.0.0'
     
     source 'https://github.com/CocoaPods/Specs.git'
     use_frameworks!
