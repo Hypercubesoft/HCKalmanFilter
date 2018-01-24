@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4589712C201883FB00030DEE /* HCMatrixObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B6E33F1F714DD600992EC9 /* HCMatrixObject.swift */; };
+		4589712D201883FE00030DEE /* HCKalmanAlgorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B6E33E1F714DD600992EC9 /* HCKalmanAlgorithm.swift */; };
 		A5D3597C1F713FD200B436D5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B6E3311F713EE700992EC9 /* AppDelegate.swift */; };
 		A5D3597D1F713FD400B436D5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5B6E3321F713EE700992EC9 /* Assets.xcassets */; };
 		A5D3597E1F713FDA00B436D5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5B6E3331F713EE700992EC9 /* LaunchScreen.storyboard */; };
@@ -268,8 +270,10 @@
 			files = (
 				A5D359861F71409C00B436D5 /* ViewController.swift in Sources */,
 				A5D359821F713FE500B436D5 /* MapService.swift in Sources */,
+				4589712D201883FE00030DEE /* HCKalmanAlgorithm.swift in Sources */,
 				A5D3597C1F713FD200B436D5 /* AppDelegate.swift in Sources */,
 				A5D359831F713FE900B436D5 /* AppNotify.swift in Sources */,
+				4589712C201883FB00030DEE /* HCMatrixObject.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

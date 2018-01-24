@@ -7,27 +7,28 @@
 //
 
 import Foundation
+import Surge
 
 class HCMatrixObject
 {
     //MARK: - HCMatrixObject properties
     
-    /// Dimension N of Matrix
-    private var n: Int
+    /// Number of Rows in Matrix
+    private var rows: Int
     
-    /// Dimension M of Matrix
-    private var m: Int
+    /// Number of Columns in Matrix
+    private var columns: Int
     
-    /// Matrix representation
-    var matrix:[[Double]]
+    /// Surge Matrix object
+    var matrix: Matrix<Double>
     
     //MARK: - Initialization
     
-    /// Initailization of matrix with N and M dimensions
-    init(n:Int,m:Int) {
-        self.n = n;
-        self.m = m;
-        self.matrix = Array(repeating: Array(repeating: 0, count: self.m), count: self.n)
+    /// Initailization of matrix with specified numbers of rows and columns
+    init(rows:Int,columns:Int) {
+        self.rows = rows;
+        self.columns = columns;
+        self.matrix = Matrix<Double>(rows: self.rows, columns: self.columns, repeatedValue: 0.0)
     }
     
     //MARK: - HCMatrixObject functions
@@ -41,7 +42,7 @@ class HCMatrixObject
     /// - returns: identity matrix object
     static func getIdentityMatrix(dim:Int) -> HCMatrixObject
     {
-        let identityMatrix = HCMatrixObject(n: dim, m: dim)
+        let identityMatrix = HCMatrixObject(rows: dim, columns: dim)
         
         for i in 0..<dim
         {
@@ -49,7 +50,7 @@ class HCMatrixObject
             {
                 if i == j
                 {
-                    identityMatrix.matrix[i][j] = 1.0
+                    identityMatrix.matrix[i,j] = 1.0
                 }
             }
         }
@@ -67,9 +68,9 @@ class HCMatrixObject
     ///   - value: double value to add in matrix
     public func addElement(i:Int,j:Int,value:Double)
     {
-        if self.matrix.count > i && self.matrix[i].count > j
+        if self.matrix.rows > i && self.matrix.columns > j
         {
-            self.matrix[i][j] = value;
+            self.matrix[i,j] = value;
         }
         else
         {
@@ -85,11 +86,11 @@ class HCMatrixObject
     ///   - matrix: array of array of double values
     public func setMatrix(matrix:[[Double]])
     {
-        if self.matrix.count > 0
+        if self.matrix.rows > 0
         {
-            if (matrix.count == self.matrix.count) && (matrix[0].count == self.matrix[0].count)
+            if (matrix.count == self.matrix.rows) && (matrix[0].count == self.matrix.columns)
             {
-                self.matrix = matrix
+                self.matrix = Matrix<Double>(matrix)
             }
         }
     }
@@ -104,9 +105,9 @@ class HCMatrixObject
     
     public func getElement(i:Int,j:Int) -> Double?
     {
-        if self.matrix.count <= i && self.matrix[i].count <= j
+        if self.matrix.rows <= i && self.matrix.columns <= j
         {
-            return self.matrix[i][j]
+            return self.matrix[i,j]
         }
         else
         {
@@ -122,75 +123,13 @@ class HCMatrixObject
     /// - returns: transposed HCMatrixObject object
     public func transpose() -> HCMatrixObject?
     {
-        let result = HCMatrixObject(n: self.m,m: self.n)
+        let result = HCMatrixObject(rows: self.rows, columns: self.columns)
         
-        for i in 0..<self.n
-        {
-            for j in 0..<self.m
-            {
-                result.matrix[j][i] = self.matrix[i][j];
-            }
-        }
+        result.matrix = Surge.transpose(self.matrix)
         
         return result
     }
     
-    /// Matrix Determinant Function
-    /// ===========================
-    /// Returns matrix determinant value
-    ///
-    /// - returns: matrix determinant value
-    public func determinant() -> Double
-    {
-        return self.determinant(n: self.n, mat: self, det: 0.0)
-    }
-    
-    /// Matrix Determinant Helper Function
-    /// ==================================
-    /// Helper function for recursively search determinant value. 
-    /// Returns submatrix accumulative determinant value.
-    ///
-    /// - parameters:
-    ///   - n: dimension of submatrix
-    ///   - mat: submatrix object
-    ///   - det: accumulative previous submatrix determinant value
-    /// - returns: submatrix accumulative determinant value
-    private func determinant(n:Int, mat:HCMatrixObject, det:Double) -> Double
-    {
-        let submat = HCMatrixObject(n: n, m: n)
-        var d = det
-        
-        if(n == 2)
-        {
-            return((mat.matrix[0][0] * mat.matrix[1][1]) - (mat.matrix[1][0] * mat.matrix[0][1]));
-        }
-        else
-        {
-            for c in 0..<n
-            {
-                var subi = 0
-                for i in 1..<n
-                {
-                    var subj = 0
-                    for j in 0..<n
-                    {
-                        if j == c
-                        {
-                            continue
-                        }
-                        
-                        submat.matrix[subi][subj] = mat.matrix[i][j]
-                        subj += 1
-                    }
-                    subi += 1
-                }
-                
-                d = d + (Double(pow(Double(-1), Double(c))) * mat.matrix[0][c] * determinant(n: n-1,mat:submat,det: d))
-            }
-        }
-        return d
-    }
-
     /// Inverse Matrix Function
     /// =======================
     /// Returns inverse matrix object
@@ -198,72 +137,9 @@ class HCMatrixObject
     /// - returns: inverse matrix object
     public func inverseMatrix() -> HCMatrixObject?
     {
-        let a = HCMatrixObject(n: 2*n, m: 2*n)
-        let result = HCMatrixObject(n: n, m: n)
-        var d:Double;
+        let result = HCMatrixObject(rows: rows, columns: columns)
         
-        for i in 0..<n
-        {
-            for j in 0..<n
-            {
-                a.matrix[i][j] = matrix[i][j]
-            }
-        }
-        
-        for i in 0..<n
-        {
-            for j in 0..<2*n
-            {
-                if j == (i+n) {
-                    a.matrix[i][j] = 1
-                }
-            }
-        }
-        
-        for i in stride(from: n-1, to: 1, by: -1)
-        {
-            if a.matrix[i-1][1] < a.matrix[i][1]
-            {
-                for j in 0..<n*2
-                {
-                    d = a.matrix[i][j]
-                    a.matrix[i][j] = a.matrix[i-1][j]
-                    a.matrix[i-1][j] = d
-                }
-            }
-        }
-        
-        for i in 0..<n
-        {
-            for j in 0..<2*n
-            {
-                if j != i
-                {
-                    d = a.matrix[j][i] / a.matrix[i][i]
-                    for k in 0..<n*2
-                    {
-                        a.matrix[j][k] = a.matrix[j][k] - (a.matrix[i][k] * d);
-                    }
-                }
-            }
-        }
-        
-        for i in 0..<n
-        {
-            d = a.matrix[i][i]
-            for j in 0..<2*n
-            {
-                a.matrix[i][j] = a.matrix[i][j] / d
-            }
-        }
-        
-        for i in 0..<n
-        {
-            for j in n..<2*n
-            {
-                result.matrix[i][j-n] = a.matrix[i][j]
-            }
-        }
+        result.matrix = Surge.inv(self.matrix)
         
         return result
     }
@@ -273,11 +149,11 @@ class HCMatrixObject
     /// Printing the entire matrix
     public func printMatrix()
     {
-        for i in 0..<self.n
+        for i in 0..<self.matrix.rows
         {
-            for j in 0..<self.m
+            for j in 0..<self.matrix.columns
             {
-               print("\(self.matrix[i][j]) ")
+                print("\(self.matrix[i,j]) ")
             }
             print("---")
         }
@@ -295,18 +171,9 @@ class HCMatrixObject
     /// - returns: result HCMatrixObject object of addition operation
     static func +(left:HCMatrixObject, right:HCMatrixObject) ->HCMatrixObject?
     {
-        let result = HCMatrixObject(n: left.n,m: left.m)
+        let result = HCMatrixObject(rows: left.rows, columns: left.columns)
         
-        if(left.n == right.n && left.m == right.m)
-        {
-            for i in 0..<left.n
-            {
-                for j in 0..<left.m
-                {
-                    result.matrix[i][j] = left.matrix[i][j] + right.matrix[i][j]
-                }
-            }
-        }
+        result.matrix = Surge.add(left.matrix, y: right.matrix)
         
         return result
     }
@@ -321,15 +188,15 @@ class HCMatrixObject
     /// - returns: result HCMatrixObject object of subtraction operation
     static func -(left:HCMatrixObject, right:HCMatrixObject) ->HCMatrixObject?
     {
-        let result = HCMatrixObject(n: left.n,m: left.m)
+        let result = HCMatrixObject(rows: left.rows, columns: left.columns)
         
-        if(left.n == right.n && left.m == right.m)
+        if(left.rows == right.rows && left.columns == right.columns)
         {
-            for i in 0..<left.n
+            for i in 0..<left.matrix.rows
             {
-                for j in 0..<left.m
+                for j in 0..<left.matrix.columns
                 {
-                    result.matrix[i][j] = left.matrix[i][j] - right.matrix[i][j]
+                    result.matrix[i,j] = left.matrix[i,j] - right.matrix[i,j]
                 }
             }
         }
@@ -347,21 +214,12 @@ class HCMatrixObject
     /// - returns: result HCMatrixObject object of multiplication operation
     static func *(left:HCMatrixObject, right:HCMatrixObject) -> HCMatrixObject?
     {
-        let result = HCMatrixObject(n: left.n,m: right.m)
+        let resultMatrix = Surge.mul(left.matrix, y: right.matrix)
         
-        if(left.m == right.n)
-        {
-            for i in 0..<left.n
-            {
-                for j in 0..<right.m
-                {
-                    for k in 0..<left.m
-                    {
-                        result.matrix[i][j] += left.matrix[i][k] * right.matrix[k][j];
-                    }
-                }
-            }
-        }
+        let result = HCMatrixObject(rows: resultMatrix.rows,columns: resultMatrix.columns)
+        result.matrix = resultMatrix
+        
         return result
     }
 }
+

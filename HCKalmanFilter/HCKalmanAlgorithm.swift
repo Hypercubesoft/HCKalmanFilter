@@ -8,6 +8,7 @@
 
 import Foundation
 import MapKit
+import Surge
 
 open class HCKalmanAlgorithm
 {
@@ -22,7 +23,7 @@ open class HCKalmanAlgorithm
     /// Acceleration variance magnitude for GPS
     /// =======================================
     /// **Sigma** value is  value for Acceleration Noise Magnitude Matrix (Qt).
-    /// Recommended value for **sigma** is 0.0625, this value is optimal for GPS problem, 
+    /// Recommended value for **sigma** is 0.0625, this value is optimal for GPS problem,
     /// it was concluded by researches.
     private let sigma = 0.0625
     
@@ -69,7 +70,7 @@ open class HCKalmanAlgorithm
     /// Acceleration Noise Magnitude Matrix
     /// ===================================
     /// **Acceleration Noise Magnitude Matrix (Qt)** is mathematical representation of external uncertainty of Kalman Algorithm.
-    /// The uncertainty associated can be represented with the “world” (i.e. things we aren’t keeping track of) 
+    /// The uncertainty associated can be represented with the “world” (i.e. things we aren’t keeping track of)
     /// by adding some new uncertainty after every prediction step.
     private var Qt:HCMatrixObject
     
@@ -79,7 +80,7 @@ open class HCKalmanAlgorithm
     /// **Sensor Noise Covariance Matrix (R)** is mathematical representation of sensor noise of Kalman Algorithm.
     /// Sensors are unreliable, and every state in our original estimate might result in a range of sensor readings.
     private var R:HCMatrixObject
-
+    
     /// Measured State Vector
     /// =====================
     /// **Measured State Vector (zt)** is mathematical representation of measuerd state vector of Kalman Algorithm.
@@ -93,26 +94,26 @@ open class HCKalmanAlgorithm
     
     /// Previous State Location
     private var previousLocation = CLLocation()
-   
+    
     
     //MARK: - HCKalmanAlgorithm initialization
     
     /// Initialization of Kalman Algorithm Constructor
     /// ==============================================
     /// - parameters:
-    ///   - initialLocation: this is CLLocation object which represent initial location 
+    ///   - initialLocation: this is CLLocation object which represent initial location
     ///                      at the moment when algorithm start
     public init(initialLocation: CLLocation)
     {
         self.previousMeasureTime = Date()
         self.previousLocation = CLLocation()
         
-        self.xk1 = HCMatrixObject(n: stateMDimension, m: stateNDimension)
-        self.Pk1 = HCMatrixObject(n: stateMDimension, m: stateMDimension)
-        self.A = HCMatrixObject(n: stateMDimension, m: stateMDimension)
-        self.Qt = HCMatrixObject(n: stateMDimension, m: stateMDimension)
-        self.R = HCMatrixObject(n: stateMDimension, m: stateMDimension)
-        self.zt = HCMatrixObject(n: stateMDimension, m: stateNDimension)
+        self.xk1 = HCMatrixObject(rows: stateMDimension, columns: stateNDimension)
+        self.Pk1 = HCMatrixObject(rows: stateMDimension, columns: stateMDimension)
+        self.A = HCMatrixObject(rows: stateMDimension, columns: stateMDimension)
+        self.Qt = HCMatrixObject(rows: stateMDimension, columns: stateMDimension)
+        self.R = HCMatrixObject(rows: stateMDimension, columns: stateMDimension)
+        self.zt = HCMatrixObject(rows: stateMDimension, columns: stateNDimension)
         
         initKalman(initialLocation: initialLocation)
     }
@@ -163,7 +164,7 @@ open class HCKalmanAlgorithm
     ///  This function is a main. **processState** will be processed current location of user by Kalman Filter
     ///  based on previous state and other parameters, and it returns corrected location
     /// - parameters:
-    ///   - currentLocation: this is CLLocation object which represent current location returned by GPS. 
+    ///   - currentLocation: this is CLLocation object which represent current location returned by GPS.
     ///                      **currentLocation** is real position of user, and it will be processed by Kalman Filter.
     /// - returns: CLLocation object with corrected latitude, longitude and altitude values
     
@@ -226,6 +227,7 @@ open class HCKalmanAlgorithm
         let Pk = ((A*Pk1)!*A.transpose()!)! + Qt
         
         let tmp = Pk!+R
+        
         // Kalman gain (Kt)
         let Kt = Pk!*(tmp?.inverseMatrix())!
         
@@ -235,11 +237,11 @@ open class HCKalmanAlgorithm
         self.xk1 = xt!
         self.Pk1 = Pt!
         
-        let lat = xk1.matrix[0][0]
-        let lon = xk1.matrix[2][0]
-        let altitude = xk1.matrix[4][0]
+        let lat = xk1.matrix[0,0]
+        let lon = xk1.matrix[2,0]
+        let altitude = xk1.matrix[4,0]
         
-        let kalmanCLLocation = CLLocation(coordinate: CLLocationCoordinate2D(latitude: lat,longitude: lon), altitude: altitude, horizontalAccuracy: kCLLocationAccuracyBestForNavigation, verticalAccuracy: kCLLocationAccuracyBestForNavigation, timestamp: previousMeasureTime)
+        let kalmanCLLocation = CLLocation(coordinate: CLLocationCoordinate2D(latitude: lat,longitude: lon), altitude: altitude, horizontalAccuracy: self.previousLocation.horizontalAccuracy, verticalAccuracy: self.previousLocation.verticalAccuracy, timestamp: previousMeasureTime)
         
         return kalmanCLLocation
     }
