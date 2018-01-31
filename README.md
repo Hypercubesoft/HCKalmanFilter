@@ -13,10 +13,6 @@
 
 ## Change Log
 
-# 1.2.2
-
-* Added support for WatchOS 2.0+
-
 # 1.2.0
 
 * In this version, we have upgraded the matrix processing functions within our class HCMatrixObject which now use core functions of the [Surge Library](https://github.com/mattt/Surge). It will greatly accelerate the processing of data and lead to faster results being obtained by the algorithm.
