@@ -1,4 +1,5 @@
 [![CocoaPods Compatible](https://img.shields.io/cocoapods/v/HCKalmanFilter.svg)](http://cocoapods.org/pods/HCKalmanFilter)
+[![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![License](https://img.shields.io/cocoapods/l/HCKalmanFilter.svg?style=flat)](http://cocoapods.org/pods/HCKalmanFilter)
 [![Platform](https://img.shields.io/cocoapods/p/HCKalmanFilter.svg?style=flat)](http://cocoapods.org/pods/HCKalmanFilter)
 ![Swift](https://img.shields.io/badge/%20in-swift%203.1-orange.svg)
@@ -49,29 +50,57 @@ print(kalmanLocation.altitude)
 
 [CocoaPods](https://cocoapods.org/) is a dependency manager for Objective-C and Swift, which automates and simplifies the process of using 3rd-party libraries like HCKalmanFilter in your projects.
 
-### Podfile
+### Via CocoaPods
 
-To integrate **HCKalmanFilter** into your Xcode project using CocoaPods, specify it in your Podfile:
+To integrate **HCKalmanFilter** into your Xcode project using **CocoaPods**:
 
-```
-target 'TargetName' do
-  use_frameworks!
-  pod 'HCKalmanFilter'
-end
-```
+1. Specify it in your Podfile:
 
-Then, run the following command:
+  ```
+  target 'TargetName' do
+    use_frameworks!
+    pod 'HCKalmanFilter'
+  end
+  ```
 
-```
-$ pod install
-```
+2. Follow the [integration guide](https://guides.cocoapods.org/using/using-cocoapods.html)
 
-### With source code
+### Via Carthage
 
-Download repository, then add HCKalmanAlgorithm directory to your project.
+To integrate **HCKalmanFilter** into your Xcode project using **Carthage**:
 
+1. Specify it in your Cartfile:
+
+  ```
+  github "Hypercubesoft/HCKalmanFilter" ~> 1.2.2
+  ```
+
+2. Follow the [integration guide](https://github.com/Carthage/Carthage#adding-frameworks-to-an-application)
+
+### Via XCWorkspace
+
+To integrate **HCKalmanFilter** into your Xcode project using **XCWorkspace**:
+
+1. Download repository
+2. Add `HCKalmanFilter.xcodeproj` file to your project workspace
+3. Add `HCKalmanFilter` to "Embedded Binaries" under `General` project settings
+4. Add `Surge` to "Embedded Binaries" under `General` project settings
+
+### Via Source Files
+
+To integrate **HCKalmanFilter** into your Xcode project using **source files**:
+
+1. Download repository
+2. Add …
+
+  - `HCKalmanAlgorithm.swift`
+  - `HCMatrixObject.swift`
+
+  … to your project
+3. Link against [*Surge*](https://github.com/mattt/Surge) manually
 
 ## Usage
+
 **1.** First import HCKalmanFilter module
 
 ```swift
@@ -98,7 +127,7 @@ hcKalmanFilter.rValue = 35.0
 let kalmanLocation = hcKalmanFilter.processState(currentLocation: myCurrentLocation)
 ```
 * **currentLocation** is CLLocation object which represents the actual coordinates received from the GPS receiver.
-* **kalmanLocation** is CLLocation object which represents coordinates obtained by processing **currentLocation** with HCKalmanFilter algorithm. You can now use the corrected coordinates for further purposes (for example, to plot the path of the object you are tracking...) 
+* **kalmanLocation** is CLLocation object which represents coordinates obtained by processing **currentLocation** with HCKalmanFilter algorithm. You can now use the corrected coordinates for further purposes (for example, to plot the path of the object you are tracking...)
 
 **5.** In case you need to stop tracking and then restart it, it is necessary to call **resetKalman** function with new start location, before continuing with the processing of the measured coordinates.
 
@@ -122,7 +151,7 @@ var hcKalmanFilter: HCKalmanAlgorithm?
 func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation])
 {
     var myLocation: CLLocation = locations.first!
-    
+
     if hcKalmanFilter == nil {
        self.hcKalmanFilter = HCKalmanAlgorithm(initialLocation: myLocation)
     }
