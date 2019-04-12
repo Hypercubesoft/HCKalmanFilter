@@ -84,10 +84,10 @@ class MapService: NSObject, CLLocationManagerDelegate
         var timePassed: TimeInterval = 0
         if myMapService.startTimes.count > 1 {
             for i in 0...myMapService.startTimes.count - 2 {
-                timePassed.add(myMapService.endTimes[i].timeIntervalSince(myMapService.startTimes[i]))
+                timePassed += myMapService.endTimes[i].timeIntervalSince(myMapService.startTimes[i])
             }
         }
-        timePassed.add(Date().timeIntervalSince(myMapService.startTimes.last!))
+        timePassed += Date().timeIntervalSince(myMapService.startTimes.last!)
         return timePassed
     }
     
