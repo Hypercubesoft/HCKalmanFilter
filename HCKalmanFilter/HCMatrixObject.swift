@@ -46,13 +46,7 @@ class HCMatrixObject
         
         for i in 0..<dim
         {
-            for j in 0..<dim
-            {
-                if i == j
-                {
-                    identityMatrix.matrix[i,j] = 1.0
-                }
-            }
+            identityMatrix.matrix[i,i] = 1.0
         }
         
         return identityMatrix
