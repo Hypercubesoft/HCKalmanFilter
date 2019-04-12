@@ -14,10 +14,14 @@ class HCMatrixObject
     //MARK: - HCMatrixObject properties
     
     /// Number of Rows in Matrix
-    private var rows: Int
+    var rows: Int {
+        return self.matrix.rows
+    }
     
     /// Number of Columns in Matrix
-    private var columns: Int
+    var columns: Int {
+        return self.matrix.columns
+    }
     
     /// Surge Matrix object
     var matrix: Matrix<Double>
@@ -26,9 +30,7 @@ class HCMatrixObject
     
     /// Initailization of matrix with specified numbers of rows and columns
     init(rows:Int,columns:Int) {
-        self.rows = rows;
-        self.columns = columns;
-        self.matrix = Matrix<Double>(rows: self.rows, columns: self.columns, repeatedValue: 0.0)
+        self.matrix = Matrix<Double>(rows: rows, columns: columns, repeatedValue: 0.0)
     }
     
     //MARK: - HCMatrixObject functions
