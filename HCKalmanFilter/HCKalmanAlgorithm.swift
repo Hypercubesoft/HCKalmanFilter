@@ -118,6 +118,28 @@ open class HCKalmanAlgorithm
         initKalman(initialLocation: initialLocation)
     }
     
+    /// Initialization of Kalman Algorithm Constructor with rValue
+    /// ==============================================
+    /// - parameters:
+    ///   - initialLocation: this is CLLocation object which represent initial location
+    ///                      at the moment when algorithm start
+    ///   - rValue: initialize with a specific rValue
+    public init(initialLocation: CLLocation, rValue: Double = 29.0)
+    {
+        self.previousMeasureTime = Date()
+        self.previousLocation = CLLocation()
+        self._rValue = rValue
+        
+        self.xk1 = HCMatrixObject(rows: stateMDimension, columns: stateNDimension)
+        self.Pk1 = HCMatrixObject(rows: stateMDimension, columns: stateMDimension)
+        self.A = HCMatrixObject(rows: stateMDimension, columns: stateMDimension)
+        self.Qt = HCMatrixObject(rows: stateMDimension, columns: stateMDimension)
+        self.R = HCMatrixObject(rows: stateMDimension, columns: stateMDimension)
+        self.zt = HCMatrixObject(rows: stateMDimension, columns: stateNDimension)
+        
+        initKalman(initialLocation: initialLocation)
+    }
+    
     //MARK: - HCKalmanAlgorithm functions
     
     /// Initialization of Kalman Algorithm Function
@@ -248,7 +270,7 @@ open class HCKalmanAlgorithm
                                           course: self.previousLocation.course,
                                           speed: self.previousLocation.speed,
                                           timestamp: previousMeasureTime)
-                                          
+        
         return kalmanCLLocation
     }
 }
