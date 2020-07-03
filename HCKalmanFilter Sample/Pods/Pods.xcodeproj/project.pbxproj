@@ -1,0 +1,1252 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		0C1885900810601510E0C632060FAF26 /* GooglePlaces */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 480B55FE3ACCAC83A30949D59053CFBD /* Build configuration list for PBXAggregateTarget "GooglePlaces" */;
+			buildPhases = (
+			);
+			dependencies = (
+				BB314D9FD28F9EE0C76AA2ABD22FC78D /* PBXTargetDependency */,
+			);
+			name = GooglePlaces;
+		};
+		885917490BC3F1DF8613D63A80B4E196 /* GooglePlacePicker */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = B4C19445312324B2FC829685DE007C84 /* Build configuration list for PBXAggregateTarget "GooglePlacePicker" */;
+			buildPhases = (
+			);
+			dependencies = (
+				C33B0DAEEBDCDD75F9AF79C9332DEC43 /* PBXTargetDependency */,
+				B5BD3C53A125FD91ACDBEBEDB9843C99 /* PBXTargetDependency */,
+			);
+			name = GooglePlacePicker;
+		};
+		E5B4BBC6DD552AC8943C7E22772FC1D3 /* GoogleMaps */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 46921981F609C5BA3CB72EC4EA41299D /* Build configuration list for PBXAggregateTarget "GoogleMaps" */;
+			buildPhases = (
+			);
+			dependencies = (
+			);
+			name = GoogleMaps;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		06EFBF03B55718E071492C66CA636ED6 /* ActionSheetCustomPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = C371A1B32926C0D0DFA0D885DD4DC8A9 /* ActionSheetCustomPicker.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		1827B2D02436E28DEF98C882E793774E /* Surge-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B7C81BD9CFFF4125980A8A78F8C8698E /* Surge-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2417238CDAABE07AA252A6DB9B2689BB /* Exponential.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A13734DA40CF2B3C47B4A2C6219594 /* Exponential.swift */; };
+		2A5DBC99818A08CD9294722424E9DC4D /* Hyperbolic.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2797B103CEF4BBACBFE7DC98F41E1A /* Hyperbolic.swift */; };
+		2E04AAA2E3146541BFBF7B4287F042FB /* Surge-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A3BC633AA3E5118D6BC01A119D6D9A21 /* Surge-dummy.m */; };
+		32165B3A0682954DD05178C9A7ED1187 /* ActionSheetStringPicker.h in Headers */ = {isa = PBXBuildFile; fileRef = 50EFC4AD42CDBDE9842378CBC4EB78F7 /* ActionSheetStringPicker.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		340B466CBA1088F0D012CD0CE05650D5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 901A4FD362D028D8375DDAE4615B6D80 /* Foundation.framework */; };
+		3DA4B75449A03BB3AED7F05BC61C781E /* Convolution.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4D6AADF535B59800BF6028E3B1B6CA /* Convolution.swift */; };
+		501D9D8444A4AC2A50E059E60053F48A /* ActionSheetLocalePicker.h in Headers */ = {isa = PBXBuildFile; fileRef = F1E3B6000D1D70F0D5AEECC25814EFFC /* ActionSheetLocalePicker.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		54D224241A014C4C6DCBD2026B429D60 /* ActionSheetDatePicker.h in Headers */ = {isa = PBXBuildFile; fileRef = 551284EF74DFCA61225DBA7E0546BC3E /* ActionSheetDatePicker.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		59789CE08DF6F1682B65A0DB845F18BE /* ActionSheetPicker-3.0-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8D037A4356F4B310A47F6B97ABDCD9E4 /* ActionSheetPicker-3.0-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5E99A3596F5F638076161D06AB2CCC56 /* ActionSheetMultipleStringPicker.h in Headers */ = {isa = PBXBuildFile; fileRef = 84D2B9AAC66954A605FE37CB63932E0F /* ActionSheetMultipleStringPicker.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5FA4B28D949E7C3084ADDF9E9188632A /* ActionSheetStringPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DAC11DE9B727DF7ED47EC927DC66B4A /* ActionSheetStringPicker.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		61EE5ED52B7595E35B0BD57761511FED /* ActionSheetPicker.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CD2428ED9A24157971A25B53633AAFA /* ActionSheetPicker.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		71418FFB7439022F0BE9F82DCA119CA1 /* Matrix.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B871A64682FAB36867FAF222D468FB4 /* Matrix.swift */; };
+		75B79EF962B30C9A6C18122F1E8D9895 /* FFT.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF543148D04ADAA8F9D69E159CEF3D70 /* FFT.swift */; };
+		7960328074653544B0F3E1B77E1AE367 /* Arithmetic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0FDC9300FB72A301E075AC31CA4580 /* Arithmetic.swift */; };
+		7A5FA2AF26C1E051151BC66F3C8639F8 /* ActionSheetCustomPicker.h in Headers */ = {isa = PBXBuildFile; fileRef = 9E5AEE16D83A231FE3153B66C86796E7 /* ActionSheetCustomPicker.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7BC299EDE256FFB63345FCBBCE28A18F /* SWActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F7C31778D50F6D75EB39C97EB55373E /* SWActionSheet.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		824AFDE5083E0416FF3724835CBCC90A /* ActionSheetMultipleStringPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = A8285CFD6E602FC0BE89B96DD331DE9D /* ActionSheetMultipleStringPicker.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		83651C970DF8263E1D00CBAE47DC3665 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB8C564CEF5B808D8A2DDAD1A29BC976 /* UIKit.framework */; };
+		89C00C0CC332A8F71967C58C40F085B5 /* Auxiliary.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6B280E1D63F38ED6A4E693F0B142355 /* Auxiliary.swift */; };
+		A1237D1EEF827FF68FD99A8DD8BE73BF /* DistancePickerView.h in Headers */ = {isa = PBXBuildFile; fileRef = B8A78AAFE1CB9869C8E5F5E1B264FE1C /* DistancePickerView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A1245932CBBBE70A10AD769723979203 /* Power.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AAF6AC43E7F460788250A9560C87FE /* Power.swift */; };
+		A527247163EFAE005CF0BDEC52920CCD /* ActionSheetPicker-3.0-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EA4068BD52E105D5C7BD1E05DBE3E64 /* ActionSheetPicker-3.0-dummy.m */; };
+		AAB1F87B62453EB017C924F30E842D5B /* ActionSheetLocalePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 2847C66A6B79482066A09730535C26B3 /* ActionSheetLocalePicker.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		B3DC3B26029E044C434692BCA1066DC8 /* ActionSheetDistancePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C1A26EEFA3A25471BAA55A71EF5181B /* ActionSheetDistancePicker.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		BADC96DF5A162AC941A110E3C95C0025 /* Pods-HCKalmanFilter Sample-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AB24BACD555F4A6FE16DD5E08D1FD182 /* Pods-HCKalmanFilter Sample-dummy.m */; };
+		C0B1DE05CABBD89231D61791493DAC2C /* ActionSheetCustomPickerDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 09D2C6063140880EE8384F44E28191CC /* ActionSheetCustomPickerDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C462C9DD4B11CE445E2C0DC761452AA2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 901A4FD362D028D8375DDAE4615B6D80 /* Foundation.framework */; };
+		C65D0EE0041E43E7211946FD5B1E2CAD /* SWActionSheet.h in Headers */ = {isa = PBXBuildFile; fileRef = 180861964EA542DD6F4031515524F448 /* SWActionSheet.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C8E3B6D1D900E64A816A45FBD10D5354 /* AbstractActionSheetPicker.h in Headers */ = {isa = PBXBuildFile; fileRef = 7DD418666731F693B2B93A28C523EF91 /* AbstractActionSheetPicker.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D0341D5D4F8AFC83444C5DE045DD1BA6 /* Trigonometric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E3AB2340EA8F4FAF6777AAEC639302 /* Trigonometric.swift */; };
+		D6144E34E5113C67462C8F990AC006A0 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BA807F5150DFFAA7CA6E6A8AA17A6C7 /* Accelerate.framework */; };
+		DFD016E0E6D64939BD7F24843BB1A0E6 /* ActionSheetDatePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 70557726537F656D4CCD69530C68FE86 /* ActionSheetDatePicker.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		E0FAE2EEEE2AF98B6EA1B8B6F0B898BD /* ActionSheetDistancePicker.h in Headers */ = {isa = PBXBuildFile; fileRef = 294CA68A905BE8B6B3686D111E461E9B /* ActionSheetDistancePicker.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E9B4D0BB62A7EA9470157B74E2663E11 /* AbstractActionSheetPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 5689507481219B7148C8498FBD52C0DF /* AbstractActionSheetPicker.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		EC87E33A103BFBE460D46C5DEFBD0937 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 901A4FD362D028D8375DDAE4615B6D80 /* Foundation.framework */; };
+		F25D072AC415EBC78EAE1E5E37859016 /* DistancePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = C45F6A53973C31B699FAEEDB1BF336B5 /* DistancePickerView.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		FF79F8F2FA5109491E1F282E2FC3F599 /* Pods-HCKalmanFilter Sample-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 76702CF61180F75742408E3BD5445E94 /* Pods-HCKalmanFilter Sample-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		35E69D0E4CDC23656657C72CBC0D50F5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0C1885900810601510E0C632060FAF26;
+			remoteInfo = GooglePlaces;
+		};
+		44915583C8AAB453CB2B8C11E6512027 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E5B4BBC6DD552AC8943C7E22772FC1D3;
+			remoteInfo = GoogleMaps;
+		};
+		454FA2549A50AB874F29BAEC8746F310 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E5B4BBC6DD552AC8943C7E22772FC1D3;
+			remoteInfo = GoogleMaps;
+		};
+		63A321123D1337005E79BCB0C3AE9790 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0C1885900810601510E0C632060FAF26;
+			remoteInfo = GooglePlaces;
+		};
+		67CFF981B41268F14FE7C731D4D8C624 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 885917490BC3F1DF8613D63A80B4E196;
+			remoteInfo = GooglePlacePicker;
+		};
+		6D00674C64B8F215B637350F9233522C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 29646BE79525429BCB5257178B28C106;
+			remoteInfo = Surge;
+		};
+		A07DD34B5CAC937899901C98B9F835CB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A43B25DDF20FCB9228471F8F5135C866;
+			remoteInfo = "ActionSheetPicker-3.0";
+		};
+		DB32E74C91B4C711DC0B0CE5A18D8A86 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E5B4BBC6DD552AC8943C7E22772FC1D3;
+			remoteInfo = GoogleMaps;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		09D2C6063140880EE8384F44E28191CC /* ActionSheetCustomPickerDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ActionSheetCustomPickerDelegate.h; path = Pickers/ActionSheetCustomPickerDelegate.h; sourceTree = "<group>"; };
+		180861964EA542DD6F4031515524F448 /* SWActionSheet.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SWActionSheet.h; path = Pickers/SWActionSheet.h; sourceTree = "<group>"; };
+		1B25517168034D8A5628F099A4AE900F /* ActionSheetPicker-3.0-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ActionSheetPicker-3.0-prefix.pch"; sourceTree = "<group>"; };
+		1BA807F5150DFFAA7CA6E6A8AA17A6C7 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Accelerate.framework; sourceTree = DEVELOPER_DIR; };
+		1E4D13B6A5C5DBBE365E554C52526E20 /* GoogleMaps.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle; sourceTree = "<group>"; };
+		218AB8A8300F342BEA4D6BF076577905 /* Surge-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Surge-prefix.pch"; sourceTree = "<group>"; };
+		25E19C29C8B9919B20B919929863E435 /* GooglePlaces.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = GooglePlaces.bundle; path = Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle; sourceTree = "<group>"; };
+		2847C66A6B79482066A09730535C26B3 /* ActionSheetLocalePicker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ActionSheetLocalePicker.m; path = Pickers/ActionSheetLocalePicker.m; sourceTree = "<group>"; };
+		28A987EB49E45E2A3080AD643784DB13 /* GooglePlacePicker.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GooglePlacePicker.xcconfig; sourceTree = "<group>"; };
+		294CA68A905BE8B6B3686D111E461E9B /* ActionSheetDistancePicker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ActionSheetDistancePicker.h; path = Pickers/ActionSheetDistancePicker.h; sourceTree = "<group>"; };
+		2CD2428ED9A24157971A25B53633AAFA /* ActionSheetPicker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ActionSheetPicker.h; path = Pickers/ActionSheetPicker.h; sourceTree = "<group>"; };
+		31662C6E4BACEAC9DE8E8F804DDA0E60 /* Surge-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Surge-Info.plist"; sourceTree = "<group>"; };
+		349908B26B6910C037268AE37FFD0D6E /* ActionSheetPicker-3.0.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "ActionSheetPicker-3.0.xcconfig"; sourceTree = "<group>"; };
+		36EF2513733D9342788BFFFB9A39C747 /* Pods-HCKalmanFilter Sample-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-HCKalmanFilter Sample-acknowledgements.plist"; sourceTree = "<group>"; };
+		3DAC11DE9B727DF7ED47EC927DC66B4A /* ActionSheetStringPicker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ActionSheetStringPicker.m; path = Pickers/ActionSheetStringPicker.m; sourceTree = "<group>"; };
+		3F35BE5560B7FA28B573B3C606B97615 /* Pods-HCKalmanFilter Sample-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-HCKalmanFilter Sample-frameworks.sh"; sourceTree = "<group>"; };
+		44ABC9C969F4C82BEEE055BF9E63AA94 /* Pods-HCKalmanFilter Sample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HCKalmanFilter Sample.release.xcconfig"; sourceTree = "<group>"; };
+		48E3AB2340EA8F4FAF6777AAEC639302 /* Trigonometric.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Trigonometric.swift; path = Source/Trigonometric.swift; sourceTree = "<group>"; };
+		4B871A64682FAB36867FAF222D468FB4 /* Matrix.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Matrix.swift; path = Source/Matrix.swift; sourceTree = "<group>"; };
+		4FF81B41AA36AD2E8F2830D875B16B0C /* ActionSheetPicker-3.0-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ActionSheetPicker-3.0-Info.plist"; sourceTree = "<group>"; };
+		50EFC4AD42CDBDE9842378CBC4EB78F7 /* ActionSheetStringPicker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ActionSheetStringPicker.h; path = Pickers/ActionSheetStringPicker.h; sourceTree = "<group>"; };
+		551284EF74DFCA61225DBA7E0546BC3E /* ActionSheetDatePicker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ActionSheetDatePicker.h; path = Pickers/ActionSheetDatePicker.h; sourceTree = "<group>"; };
+		5689507481219B7148C8498FBD52C0DF /* AbstractActionSheetPicker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AbstractActionSheetPicker.m; path = Pickers/AbstractActionSheetPicker.m; sourceTree = "<group>"; };
+		5CED0ECFFAB50BFFF45101C220FDB56B /* GooglePlacePicker.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = GooglePlacePicker.bundle; path = Frameworks/GooglePlacePicker.framework/Resources/GooglePlacePicker.bundle; sourceTree = "<group>"; };
+		60E47343FAF9142970512E401340ED0B /* Pods-HCKalmanFilter Sample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HCKalmanFilter Sample.debug.xcconfig"; sourceTree = "<group>"; };
+		626F44B5769389E8919281865DFB51A2 /* Pods-HCKalmanFilter Sample-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-HCKalmanFilter Sample-resources.sh"; sourceTree = "<group>"; };
+		65BFDB332B4A9501D03A359527FDD0B4 /* ActionSheetPicker-3.0.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "ActionSheetPicker-3.0.modulemap"; sourceTree = "<group>"; };
+		6D0FDC9300FB72A301E075AC31CA4580 /* Arithmetic.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Arithmetic.swift; path = Source/Arithmetic.swift; sourceTree = "<group>"; };
+		6EA4068BD52E105D5C7BD1E05DBE3E64 /* ActionSheetPicker-3.0-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ActionSheetPicker-3.0-dummy.m"; sourceTree = "<group>"; };
+		70557726537F656D4CCD69530C68FE86 /* ActionSheetDatePicker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ActionSheetDatePicker.m; path = Pickers/ActionSheetDatePicker.m; sourceTree = "<group>"; };
+		76702CF61180F75742408E3BD5445E94 /* Pods-HCKalmanFilter Sample-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-HCKalmanFilter Sample-umbrella.h"; sourceTree = "<group>"; };
+		7B5FD9572799A5D28A51AB65AA3A4A75 /* GoogleMaps.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GoogleMaps.xcconfig; sourceTree = "<group>"; };
+		7D4D6AADF535B59800BF6028E3B1B6CA /* Convolution.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Convolution.swift; path = Source/Convolution.swift; sourceTree = "<group>"; };
+		7DD418666731F693B2B93A28C523EF91 /* AbstractActionSheetPicker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AbstractActionSheetPicker.h; path = Pickers/AbstractActionSheetPicker.h; sourceTree = "<group>"; };
+		7F7C31778D50F6D75EB39C97EB55373E /* SWActionSheet.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SWActionSheet.m; path = Pickers/SWActionSheet.m; sourceTree = "<group>"; };
+		80AAF6AC43E7F460788250A9560C87FE /* Power.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Power.swift; path = Source/Power.swift; sourceTree = "<group>"; };
+		84D2B9AAC66954A605FE37CB63932E0F /* ActionSheetMultipleStringPicker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ActionSheetMultipleStringPicker.h; path = Pickers/ActionSheetMultipleStringPicker.h; sourceTree = "<group>"; };
+		855CC83C6A3DD5879A9DA85BE87C3807 /* Pods-HCKalmanFilter Sample.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-HCKalmanFilter Sample.modulemap"; sourceTree = "<group>"; };
+		8C1A26EEFA3A25471BAA55A71EF5181B /* ActionSheetDistancePicker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ActionSheetDistancePicker.m; path = Pickers/ActionSheetDistancePicker.m; sourceTree = "<group>"; };
+		8D037A4356F4B310A47F6B97ABDCD9E4 /* ActionSheetPicker-3.0-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ActionSheetPicker-3.0-umbrella.h"; sourceTree = "<group>"; };
+		901A4FD362D028D8375DDAE4615B6D80 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		95F569966EC255E86A891E4E070BB5F6 /* GoogleMapsCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMapsCore.framework; path = Maps/Frameworks/GoogleMapsCore.framework; sourceTree = "<group>"; };
+		983A68009EC2CFBD80C2863A1CD68578 /* GooglePlaces.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GooglePlaces.framework; path = Frameworks/GooglePlaces.framework; sourceTree = "<group>"; };
+		9A1B3C3790BEB5F35ECC945CDC74692B /* Pods-HCKalmanFilter Sample-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-HCKalmanFilter Sample-acknowledgements.markdown"; sourceTree = "<group>"; };
+		9A6FD438DC0223E55BF0B8C9493B5505 /* Surge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Surge.framework; path = Surge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9E5AEE16D83A231FE3153B66C86796E7 /* ActionSheetCustomPicker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ActionSheetCustomPicker.h; path = Pickers/ActionSheetCustomPicker.h; sourceTree = "<group>"; };
+		A3BC633AA3E5118D6BC01A119D6D9A21 /* Surge-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Surge-dummy.m"; sourceTree = "<group>"; };
+		A6B280E1D63F38ED6A4E693F0B142355 /* Auxiliary.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Auxiliary.swift; path = Source/Auxiliary.swift; sourceTree = "<group>"; };
+		A8285CFD6E602FC0BE89B96DD331DE9D /* ActionSheetMultipleStringPicker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ActionSheetMultipleStringPicker.m; path = Pickers/ActionSheetMultipleStringPicker.m; sourceTree = "<group>"; };
+		AA2797B103CEF4BBACBFE7DC98F41E1A /* Hyperbolic.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Hyperbolic.swift; path = Source/Hyperbolic.swift; sourceTree = "<group>"; };
+		AB24BACD555F4A6FE16DD5E08D1FD182 /* Pods-HCKalmanFilter Sample-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-HCKalmanFilter Sample-dummy.m"; sourceTree = "<group>"; };
+		AF543148D04ADAA8F9D69E159CEF3D70 /* FFT.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FFT.swift; path = Source/FFT.swift; sourceTree = "<group>"; };
+		B6FDA7645C04119052F3F82219580374 /* Surge.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Surge.xcconfig; sourceTree = "<group>"; };
+		B7C81BD9CFFF4125980A8A78F8C8698E /* Surge-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Surge-umbrella.h"; sourceTree = "<group>"; };
+		B8A78AAFE1CB9869C8E5F5E1B264FE1C /* DistancePickerView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DistancePickerView.h; path = Pickers/DistancePickerView.h; sourceTree = "<group>"; };
+		BB875F2577544A44240FA49B5D87F463 /* GooglePlaces.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GooglePlaces.xcconfig; sourceTree = "<group>"; };
+		BD94BD7E6653F9D88402404A1CB65292 /* GooglePlacePicker.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GooglePlacePicker.framework; path = Frameworks/GooglePlacePicker.framework; sourceTree = "<group>"; };
+		C371A1B32926C0D0DFA0D885DD4DC8A9 /* ActionSheetCustomPicker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ActionSheetCustomPicker.m; path = Pickers/ActionSheetCustomPicker.m; sourceTree = "<group>"; };
+		C40F620ADB51724B4231510E77A44481 /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMaps.framework; path = Maps/Frameworks/GoogleMaps.framework; sourceTree = "<group>"; };
+		C45F6A53973C31B699FAEEDB1BF336B5 /* DistancePickerView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DistancePickerView.m; path = Pickers/DistancePickerView.m; sourceTree = "<group>"; };
+		C5BEE219738C0FD6F2F1CBB782EA55C5 /* Surge.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Surge.modulemap; sourceTree = "<group>"; };
+		D0E5DDC378DB44070781AF003AF54545 /* GoogleMapsBase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMapsBase.framework; path = Base/Frameworks/GoogleMapsBase.framework; sourceTree = "<group>"; };
+		D50666D85116DE5955264B7891401ABE /* Pods_HCKalmanFilter_Sample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_HCKalmanFilter_Sample.framework; path = "Pods-HCKalmanFilter Sample.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D6E470A0C684D4FBC08BDF7A28A2A38B /* ActionSheetPicker_3_0.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = ActionSheetPicker_3_0.framework; path = "ActionSheetPicker-3.0.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D8A13734DA40CF2B3C47B4A2C6219594 /* Exponential.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Exponential.swift; path = Source/Exponential.swift; sourceTree = "<group>"; };
+		F1E3B6000D1D70F0D5AEECC25814EFFC /* ActionSheetLocalePicker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ActionSheetLocalePicker.h; path = Pickers/ActionSheetLocalePicker.h; sourceTree = "<group>"; };
+		F9FF94F793A3502A0A98C43A03CB4D9F /* Pods-HCKalmanFilter Sample-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-HCKalmanFilter Sample-Info.plist"; sourceTree = "<group>"; };
+		FB8C564CEF5B808D8A2DDAD1A29BC976 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		20F8964FA0C7699DB6420726232861CB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D6144E34E5113C67462C8F990AC006A0 /* Accelerate.framework in Frameworks */,
+				340B466CBA1088F0D012CD0CE05650D5 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5CB46C5BAA16D47CA55D00459B31D084 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C462C9DD4B11CE445E2C0DC761452AA2 /* Foundation.framework in Frameworks */,
+				83651C970DF8263E1D00CBAE47DC3665 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		675F1C3590A99EAFB3EFA4AE3B60A127 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC87E33A103BFBE460D46C5DEFBD0937 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0299A5A839462E9CDD1CD6EB377E79B0 /* Maps */ = {
+			isa = PBXGroup;
+			children = (
+				82D2C4D743BD856C472330AF8687DDD2 /* Frameworks */,
+				42E9F3F2C404DAD28D729CFFD0571DF3 /* Resources */,
+			);
+			name = Maps;
+			sourceTree = "<group>";
+		};
+		03C5C200A0787E300053CFA8F53CA094 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C8D90B73987DD23BE048A90B4CDD9EBA /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0A7E83CF6BA46D676911CA4682ED94B5 /* GoogleMaps */ = {
+			isa = PBXGroup;
+			children = (
+				FA3C162ED3F5EA872E9B070D612187FD /* Base */,
+				0299A5A839462E9CDD1CD6EB377E79B0 /* Maps */,
+				BA2CFB1F30F2653093F7EFF20F4FC441 /* Support Files */,
+			);
+			name = GoogleMaps;
+			path = GoogleMaps;
+			sourceTree = "<group>";
+		};
+		1A7DBFBBDD1394FB896D61ED37F3862F /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				C5BEE219738C0FD6F2F1CBB782EA55C5 /* Surge.modulemap */,
+				B6FDA7645C04119052F3F82219580374 /* Surge.xcconfig */,
+				A3BC633AA3E5118D6BC01A119D6D9A21 /* Surge-dummy.m */,
+				31662C6E4BACEAC9DE8E8F804DDA0E60 /* Surge-Info.plist */,
+				218AB8A8300F342BEA4D6BF076577905 /* Surge-prefix.pch */,
+				B7C81BD9CFFF4125980A8A78F8C8698E /* Surge-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Surge";
+			sourceTree = "<group>";
+		};
+		1DA8012390849CA415D8A5F2E58607F7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BD94BD7E6653F9D88402404A1CB65292 /* GooglePlacePicker.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		26602F3E93376026A19CDD6CAF90B8D1 /* ActionSheetPicker-3.0 */ = {
+			isa = PBXGroup;
+			children = (
+				7DD418666731F693B2B93A28C523EF91 /* AbstractActionSheetPicker.h */,
+				5689507481219B7148C8498FBD52C0DF /* AbstractActionSheetPicker.m */,
+				9E5AEE16D83A231FE3153B66C86796E7 /* ActionSheetCustomPicker.h */,
+				C371A1B32926C0D0DFA0D885DD4DC8A9 /* ActionSheetCustomPicker.m */,
+				09D2C6063140880EE8384F44E28191CC /* ActionSheetCustomPickerDelegate.h */,
+				551284EF74DFCA61225DBA7E0546BC3E /* ActionSheetDatePicker.h */,
+				70557726537F656D4CCD69530C68FE86 /* ActionSheetDatePicker.m */,
+				294CA68A905BE8B6B3686D111E461E9B /* ActionSheetDistancePicker.h */,
+				8C1A26EEFA3A25471BAA55A71EF5181B /* ActionSheetDistancePicker.m */,
+				F1E3B6000D1D70F0D5AEECC25814EFFC /* ActionSheetLocalePicker.h */,
+				2847C66A6B79482066A09730535C26B3 /* ActionSheetLocalePicker.m */,
+				84D2B9AAC66954A605FE37CB63932E0F /* ActionSheetMultipleStringPicker.h */,
+				A8285CFD6E602FC0BE89B96DD331DE9D /* ActionSheetMultipleStringPicker.m */,
+				2CD2428ED9A24157971A25B53633AAFA /* ActionSheetPicker.h */,
+				50EFC4AD42CDBDE9842378CBC4EB78F7 /* ActionSheetStringPicker.h */,
+				3DAC11DE9B727DF7ED47EC927DC66B4A /* ActionSheetStringPicker.m */,
+				B8A78AAFE1CB9869C8E5F5E1B264FE1C /* DistancePickerView.h */,
+				C45F6A53973C31B699FAEEDB1BF336B5 /* DistancePickerView.m */,
+				180861964EA542DD6F4031515524F448 /* SWActionSheet.h */,
+				7F7C31778D50F6D75EB39C97EB55373E /* SWActionSheet.m */,
+				E11F3B8C16F99CF071917C9E03798B48 /* Support Files */,
+			);
+			name = "ActionSheetPicker-3.0";
+			path = "ActionSheetPicker-3.0";
+			sourceTree = "<group>";
+		};
+		28D51309C996405A092F535EC5DC50F6 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				28A987EB49E45E2A3080AD643784DB13 /* GooglePlacePicker.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/GooglePlacePicker";
+			sourceTree = "<group>";
+		};
+		316D736A19EF1C1916B579E6393C4753 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5CED0ECFFAB50BFFF45101C220FDB56B /* GooglePlacePicker.bundle */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		42E9F3F2C404DAD28D729CFFD0571DF3 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1E4D13B6A5C5DBBE365E554C52526E20 /* GoogleMaps.bundle */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		52CD739D2CF8D2A0B8973CC9196E1C10 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				BB875F2577544A44240FA49B5D87F463 /* GooglePlaces.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/GooglePlaces";
+			sourceTree = "<group>";
+		};
+		557658AFC0577E96AAE5754A838585BD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				983A68009EC2CFBD80C2863A1CD68578 /* GooglePlaces.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6D2804F3E7FE8DFF79C5068F14843191 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				25E19C29C8B9919B20B919929863E435 /* GooglePlaces.bundle */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		81EE6EA24AA435CF40F627F39CEB1D52 /* GooglePlacePicker */ = {
+			isa = PBXGroup;
+			children = (
+				1DA8012390849CA415D8A5F2E58607F7 /* Frameworks */,
+				316D736A19EF1C1916B579E6393C4753 /* Resources */,
+				28D51309C996405A092F535EC5DC50F6 /* Support Files */,
+			);
+			name = GooglePlacePicker;
+			path = GooglePlacePicker;
+			sourceTree = "<group>";
+		};
+		82D2C4D743BD856C472330AF8687DDD2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C40F620ADB51724B4231510E77A44481 /* GoogleMaps.framework */,
+				95F569966EC255E86A891E4E070BB5F6 /* GoogleMapsCore.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8358FD6E1B5396906766DFFDBE3FD5F4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D0E5DDC378DB44070781AF003AF54545 /* GoogleMapsBase.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		977EFD01584FB16FEDCCD5121755D331 /* GooglePlaces */ = {
+			isa = PBXGroup;
+			children = (
+				557658AFC0577E96AAE5754A838585BD /* Frameworks */,
+				6D2804F3E7FE8DFF79C5068F14843191 /* Resources */,
+				52CD739D2CF8D2A0B8973CC9196E1C10 /* Support Files */,
+			);
+			name = GooglePlaces;
+			path = GooglePlaces;
+			sourceTree = "<group>";
+		};
+		A67CCDB19E043B6486146B02BA16688E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D6E470A0C684D4FBC08BDF7A28A2A38B /* ActionSheetPicker_3_0.framework */,
+				D50666D85116DE5955264B7891401ABE /* Pods_HCKalmanFilter_Sample.framework */,
+				9A6FD438DC0223E55BF0B8C9493B5505 /* Surge.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B07A340E47198D66EAB84488585392B3 /* Pods-HCKalmanFilter Sample */ = {
+			isa = PBXGroup;
+			children = (
+				855CC83C6A3DD5879A9DA85BE87C3807 /* Pods-HCKalmanFilter Sample.modulemap */,
+				9A1B3C3790BEB5F35ECC945CDC74692B /* Pods-HCKalmanFilter Sample-acknowledgements.markdown */,
+				36EF2513733D9342788BFFFB9A39C747 /* Pods-HCKalmanFilter Sample-acknowledgements.plist */,
+				AB24BACD555F4A6FE16DD5E08D1FD182 /* Pods-HCKalmanFilter Sample-dummy.m */,
+				3F35BE5560B7FA28B573B3C606B97615 /* Pods-HCKalmanFilter Sample-frameworks.sh */,
+				F9FF94F793A3502A0A98C43A03CB4D9F /* Pods-HCKalmanFilter Sample-Info.plist */,
+				626F44B5769389E8919281865DFB51A2 /* Pods-HCKalmanFilter Sample-resources.sh */,
+				76702CF61180F75742408E3BD5445E94 /* Pods-HCKalmanFilter Sample-umbrella.h */,
+				60E47343FAF9142970512E401340ED0B /* Pods-HCKalmanFilter Sample.debug.xcconfig */,
+				44ABC9C969F4C82BEEE055BF9E63AA94 /* Pods-HCKalmanFilter Sample.release.xcconfig */,
+			);
+			name = "Pods-HCKalmanFilter Sample";
+			path = "Target Support Files/Pods-HCKalmanFilter Sample";
+			sourceTree = "<group>";
+		};
+		BA2CFB1F30F2653093F7EFF20F4FC441 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				7B5FD9572799A5D28A51AB65AA3A4A75 /* GoogleMaps.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/GoogleMaps";
+			sourceTree = "<group>";
+		};
+		BD2933CE82FFF3927CB078D7A529D089 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				B07A340E47198D66EAB84488585392B3 /* Pods-HCKalmanFilter Sample */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		C8D90B73987DD23BE048A90B4CDD9EBA /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				1BA807F5150DFFAA7CA6E6A8AA17A6C7 /* Accelerate.framework */,
+				901A4FD362D028D8375DDAE4615B6D80 /* Foundation.framework */,
+				FB8C564CEF5B808D8A2DDAD1A29BC976 /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				03C5C200A0787E300053CFA8F53CA094 /* Frameworks */,
+				F8761115D9FDB727CCB13CEF97CAFBFD /* Pods */,
+				A67CCDB19E043B6486146B02BA16688E /* Products */,
+				BD2933CE82FFF3927CB078D7A529D089 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		E11F3B8C16F99CF071917C9E03798B48 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				65BFDB332B4A9501D03A359527FDD0B4 /* ActionSheetPicker-3.0.modulemap */,
+				349908B26B6910C037268AE37FFD0D6E /* ActionSheetPicker-3.0.xcconfig */,
+				6EA4068BD52E105D5C7BD1E05DBE3E64 /* ActionSheetPicker-3.0-dummy.m */,
+				4FF81B41AA36AD2E8F2830D875B16B0C /* ActionSheetPicker-3.0-Info.plist */,
+				1B25517168034D8A5628F099A4AE900F /* ActionSheetPicker-3.0-prefix.pch */,
+				8D037A4356F4B310A47F6B97ABDCD9E4 /* ActionSheetPicker-3.0-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/ActionSheetPicker-3.0";
+			sourceTree = "<group>";
+		};
+		EA5E9D64C99D6355F471CB5A67BBCCD8 /* Surge */ = {
+			isa = PBXGroup;
+			children = (
+				6D0FDC9300FB72A301E075AC31CA4580 /* Arithmetic.swift */,
+				A6B280E1D63F38ED6A4E693F0B142355 /* Auxiliary.swift */,
+				7D4D6AADF535B59800BF6028E3B1B6CA /* Convolution.swift */,
+				D8A13734DA40CF2B3C47B4A2C6219594 /* Exponential.swift */,
+				AF543148D04ADAA8F9D69E159CEF3D70 /* FFT.swift */,
+				AA2797B103CEF4BBACBFE7DC98F41E1A /* Hyperbolic.swift */,
+				4B871A64682FAB36867FAF222D468FB4 /* Matrix.swift */,
+				80AAF6AC43E7F460788250A9560C87FE /* Power.swift */,
+				48E3AB2340EA8F4FAF6777AAEC639302 /* Trigonometric.swift */,
+				1A7DBFBBDD1394FB896D61ED37F3862F /* Support Files */,
+			);
+			name = Surge;
+			path = Surge;
+			sourceTree = "<group>";
+		};
+		F8761115D9FDB727CCB13CEF97CAFBFD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				26602F3E93376026A19CDD6CAF90B8D1 /* ActionSheetPicker-3.0 */,
+				0A7E83CF6BA46D676911CA4682ED94B5 /* GoogleMaps */,
+				81EE6EA24AA435CF40F627F39CEB1D52 /* GooglePlacePicker */,
+				977EFD01584FB16FEDCCD5121755D331 /* GooglePlaces */,
+				EA5E9D64C99D6355F471CB5A67BBCCD8 /* Surge */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		FA3C162ED3F5EA872E9B070D612187FD /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				8358FD6E1B5396906766DFFDBE3FD5F4 /* Frameworks */,
+			);
+			name = Base;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		579B6C3F8E793DFEE546FC5983783574 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF79F8F2FA5109491E1F282E2FC3F599 /* Pods-HCKalmanFilter Sample-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6758C70DF7E9756ED3CD425431F4FD6C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1827B2D02436E28DEF98C882E793774E /* Surge-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F797236E9943400DC9B18DA5F8395299 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C8E3B6D1D900E64A816A45FBD10D5354 /* AbstractActionSheetPicker.h in Headers */,
+				7A5FA2AF26C1E051151BC66F3C8639F8 /* ActionSheetCustomPicker.h in Headers */,
+				C0B1DE05CABBD89231D61791493DAC2C /* ActionSheetCustomPickerDelegate.h in Headers */,
+				54D224241A014C4C6DCBD2026B429D60 /* ActionSheetDatePicker.h in Headers */,
+				E0FAE2EEEE2AF98B6EA1B8B6F0B898BD /* ActionSheetDistancePicker.h in Headers */,
+				501D9D8444A4AC2A50E059E60053F48A /* ActionSheetLocalePicker.h in Headers */,
+				5E99A3596F5F638076161D06AB2CCC56 /* ActionSheetMultipleStringPicker.h in Headers */,
+				59789CE08DF6F1682B65A0DB845F18BE /* ActionSheetPicker-3.0-umbrella.h in Headers */,
+				61EE5ED52B7595E35B0BD57761511FED /* ActionSheetPicker.h in Headers */,
+				32165B3A0682954DD05178C9A7ED1187 /* ActionSheetStringPicker.h in Headers */,
+				A1237D1EEF827FF68FD99A8DD8BE73BF /* DistancePickerView.h in Headers */,
+				C65D0EE0041E43E7211946FD5B1E2CAD /* SWActionSheet.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		29646BE79525429BCB5257178B28C106 /* Surge */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0C480C312265764E38A819F791ED0F48 /* Build configuration list for PBXNativeTarget "Surge" */;
+			buildPhases = (
+				6758C70DF7E9756ED3CD425431F4FD6C /* Headers */,
+				EC5A95C250CB620A13C339185502BA7E /* Sources */,
+				20F8964FA0C7699DB6420726232861CB /* Frameworks */,
+				41DC3B5CE0354A0BEA30DFCD36DB5522 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Surge;
+			productName = Surge;
+			productReference = 9A6FD438DC0223E55BF0B8C9493B5505 /* Surge.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		7C34D4614722488BE360DAA4335F82C5 /* Pods-HCKalmanFilter Sample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 38115EE9ADC8E606CAD878A753A609BF /* Build configuration list for PBXNativeTarget "Pods-HCKalmanFilter Sample" */;
+			buildPhases = (
+				579B6C3F8E793DFEE546FC5983783574 /* Headers */,
+				97D924A86C0B590F318A878EF57F1714 /* Sources */,
+				675F1C3590A99EAFB3EFA4AE3B60A127 /* Frameworks */,
+				AF89FD1786BE6E60BF7B32588E7407AA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E9C03AF67CCB85E2CC18800437C13228 /* PBXTargetDependency */,
+				09A044841B77409F34626984AEDFC2C8 /* PBXTargetDependency */,
+				55469CC9374FCEABEBC71F9A7B352946 /* PBXTargetDependency */,
+				05B207A0B73F895A1F3CAD4E57E1EC2D /* PBXTargetDependency */,
+				524EBF91EAA544369898662F41AD6C02 /* PBXTargetDependency */,
+			);
+			name = "Pods-HCKalmanFilter Sample";
+			productName = "Pods-HCKalmanFilter Sample";
+			productReference = D50666D85116DE5955264B7891401ABE /* Pods_HCKalmanFilter_Sample.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		A43B25DDF20FCB9228471F8F5135C866 /* ActionSheetPicker-3.0 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 543AFABDB667AF073C3569847B1008C0 /* Build configuration list for PBXNativeTarget "ActionSheetPicker-3.0" */;
+			buildPhases = (
+				F797236E9943400DC9B18DA5F8395299 /* Headers */,
+				0E787632F3433FAA0F5CA827E9067BC0 /* Sources */,
+				5CB46C5BAA16D47CA55D00459B31D084 /* Frameworks */,
+				0B560EB734A24D3FFC20F9A9D2AC0465 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ActionSheetPicker-3.0";
+			productName = "ActionSheetPicker-3.0";
+			productReference = D6E470A0C684D4FBC08BDF7A28A2A38B /* ActionSheetPicker_3_0.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = A67CCDB19E043B6486146B02BA16688E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A43B25DDF20FCB9228471F8F5135C866 /* ActionSheetPicker-3.0 */,
+				E5B4BBC6DD552AC8943C7E22772FC1D3 /* GoogleMaps */,
+				885917490BC3F1DF8613D63A80B4E196 /* GooglePlacePicker */,
+				0C1885900810601510E0C632060FAF26 /* GooglePlaces */,
+				7C34D4614722488BE360DAA4335F82C5 /* Pods-HCKalmanFilter Sample */,
+				29646BE79525429BCB5257178B28C106 /* Surge */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0B560EB734A24D3FFC20F9A9D2AC0465 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		41DC3B5CE0354A0BEA30DFCD36DB5522 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF89FD1786BE6E60BF7B32588E7407AA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0E787632F3433FAA0F5CA827E9067BC0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E9B4D0BB62A7EA9470157B74E2663E11 /* AbstractActionSheetPicker.m in Sources */,
+				06EFBF03B55718E071492C66CA636ED6 /* ActionSheetCustomPicker.m in Sources */,
+				DFD016E0E6D64939BD7F24843BB1A0E6 /* ActionSheetDatePicker.m in Sources */,
+				B3DC3B26029E044C434692BCA1066DC8 /* ActionSheetDistancePicker.m in Sources */,
+				AAB1F87B62453EB017C924F30E842D5B /* ActionSheetLocalePicker.m in Sources */,
+				824AFDE5083E0416FF3724835CBCC90A /* ActionSheetMultipleStringPicker.m in Sources */,
+				A527247163EFAE005CF0BDEC52920CCD /* ActionSheetPicker-3.0-dummy.m in Sources */,
+				5FA4B28D949E7C3084ADDF9E9188632A /* ActionSheetStringPicker.m in Sources */,
+				F25D072AC415EBC78EAE1E5E37859016 /* DistancePickerView.m in Sources */,
+				7BC299EDE256FFB63345FCBBCE28A18F /* SWActionSheet.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		97D924A86C0B590F318A878EF57F1714 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BADC96DF5A162AC941A110E3C95C0025 /* Pods-HCKalmanFilter Sample-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC5A95C250CB620A13C339185502BA7E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7960328074653544B0F3E1B77E1AE367 /* Arithmetic.swift in Sources */,
+				89C00C0CC332A8F71967C58C40F085B5 /* Auxiliary.swift in Sources */,
+				3DA4B75449A03BB3AED7F05BC61C781E /* Convolution.swift in Sources */,
+				2417238CDAABE07AA252A6DB9B2689BB /* Exponential.swift in Sources */,
+				75B79EF962B30C9A6C18122F1E8D9895 /* FFT.swift in Sources */,
+				2A5DBC99818A08CD9294722424E9DC4D /* Hyperbolic.swift in Sources */,
+				71418FFB7439022F0BE9F82DCA119CA1 /* Matrix.swift in Sources */,
+				A1245932CBBBE70A10AD769723979203 /* Power.swift in Sources */,
+				2E04AAA2E3146541BFBF7B4287F042FB /* Surge-dummy.m in Sources */,
+				D0341D5D4F8AFC83444C5DE045DD1BA6 /* Trigonometric.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		05B207A0B73F895A1F3CAD4E57E1EC2D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GooglePlaces;
+			target = 0C1885900810601510E0C632060FAF26 /* GooglePlaces */;
+			targetProxy = 63A321123D1337005E79BCB0C3AE9790 /* PBXContainerItemProxy */;
+		};
+		09A044841B77409F34626984AEDFC2C8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GoogleMaps;
+			target = E5B4BBC6DD552AC8943C7E22772FC1D3 /* GoogleMaps */;
+			targetProxy = 454FA2549A50AB874F29BAEC8746F310 /* PBXContainerItemProxy */;
+		};
+		524EBF91EAA544369898662F41AD6C02 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Surge;
+			target = 29646BE79525429BCB5257178B28C106 /* Surge */;
+			targetProxy = 6D00674C64B8F215B637350F9233522C /* PBXContainerItemProxy */;
+		};
+		55469CC9374FCEABEBC71F9A7B352946 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GooglePlacePicker;
+			target = 885917490BC3F1DF8613D63A80B4E196 /* GooglePlacePicker */;
+			targetProxy = 67CFF981B41268F14FE7C731D4D8C624 /* PBXContainerItemProxy */;
+		};
+		B5BD3C53A125FD91ACDBEBEDB9843C99 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GooglePlaces;
+			target = 0C1885900810601510E0C632060FAF26 /* GooglePlaces */;
+			targetProxy = 35E69D0E4CDC23656657C72CBC0D50F5 /* PBXContainerItemProxy */;
+		};
+		BB314D9FD28F9EE0C76AA2ABD22FC78D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GoogleMaps;
+			target = E5B4BBC6DD552AC8943C7E22772FC1D3 /* GoogleMaps */;
+			targetProxy = 44915583C8AAB453CB2B8C11E6512027 /* PBXContainerItemProxy */;
+		};
+		C33B0DAEEBDCDD75F9AF79C9332DEC43 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GoogleMaps;
+			target = E5B4BBC6DD552AC8943C7E22772FC1D3 /* GoogleMaps */;
+			targetProxy = DB32E74C91B4C711DC0B0CE5A18D8A86 /* PBXContainerItemProxy */;
+		};
+		E9C03AF67CCB85E2CC18800437C13228 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "ActionSheetPicker-3.0";
+			target = A43B25DDF20FCB9228471F8F5135C866 /* ActionSheetPicker-3.0 */;
+			targetProxy = A07DD34B5CAC937899901C98B9F835CB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		2C1C4625A069FBBE1AA822F8E0C646B8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 28A987EB49E45E2A3080AD643784DB13 /* GooglePlacePicker.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4AA46832D8A16AA4E4811383B204D2A4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7B5FD9572799A5D28A51AB65AA3A4A75 /* GoogleMaps.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		595DD5539089161955FE3C7084B0C9B2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 28A987EB49E45E2A3080AD643784DB13 /* GooglePlacePicker.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6CEFD4A0FF7D85887390E5ED002003D0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BB875F2577544A44240FA49B5D87F463 /* GooglePlaces.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7FD5C4D0A832CCE4C00F7CB02BFA7488 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 60E47343FAF9142970512E401340ED0B /* Pods-HCKalmanFilter Sample.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-HCKalmanFilter Sample/Pods-HCKalmanFilter Sample-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-HCKalmanFilter Sample/Pods-HCKalmanFilter Sample.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		807DF571A0A40A54E2FE94EB1398BBE8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B6FDA7645C04119052F3F82219580374 /* Surge.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Surge/Surge-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Surge/Surge-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Surge/Surge.modulemap";
+				PRODUCT_MODULE_NAME = Surge;
+				PRODUCT_NAME = Surge;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		8F17DC3A99F99FBAD606CE6963886315 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		916E0404255105F480DC4950B7625F7A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		A2F13F5A4D037FD926C14D8AFA31443F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 349908B26B6910C037268AE37FFD0D6E /* ActionSheetPicker-3.0.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/ActionSheetPicker-3.0/ActionSheetPicker-3.0-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ActionSheetPicker-3.0/ActionSheetPicker-3.0-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/ActionSheetPicker-3.0/ActionSheetPicker-3.0.modulemap";
+				PRODUCT_MODULE_NAME = ActionSheetPicker_3_0;
+				PRODUCT_NAME = ActionSheetPicker_3_0;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		C2C3AD6A65FBEB5F9771A2C4ED3615D4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 44ABC9C969F4C82BEEE055BF9E63AA94 /* Pods-HCKalmanFilter Sample.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-HCKalmanFilter Sample/Pods-HCKalmanFilter Sample-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-HCKalmanFilter Sample/Pods-HCKalmanFilter Sample.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		C7565AEA7FCD8F66CAF546DC5AF1404F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7B5FD9572799A5D28A51AB65AA3A4A75 /* GoogleMaps.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C9C8B7A5C0A2BC3DC7FEE5F90BE94C77 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BB875F2577544A44240FA49B5D87F463 /* GooglePlaces.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CBA8C92F86B546A2A1729930089DB3F6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B6FDA7645C04119052F3F82219580374 /* Surge.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Surge/Surge-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Surge/Surge-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Surge/Surge.modulemap";
+				PRODUCT_MODULE_NAME = Surge;
+				PRODUCT_NAME = Surge;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		EE1CE3111D33F30F348BBC6FC9C45099 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 349908B26B6910C037268AE37FFD0D6E /* ActionSheetPicker-3.0.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/ActionSheetPicker-3.0/ActionSheetPicker-3.0-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ActionSheetPicker-3.0/ActionSheetPicker-3.0-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/ActionSheetPicker-3.0/ActionSheetPicker-3.0.modulemap";
+				PRODUCT_MODULE_NAME = ActionSheetPicker_3_0;
+				PRODUCT_NAME = ActionSheetPicker_3_0;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0C480C312265764E38A819F791ED0F48 /* Build configuration list for PBXNativeTarget "Surge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				807DF571A0A40A54E2FE94EB1398BBE8 /* Debug */,
+				CBA8C92F86B546A2A1729930089DB3F6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		38115EE9ADC8E606CAD878A753A609BF /* Build configuration list for PBXNativeTarget "Pods-HCKalmanFilter Sample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7FD5C4D0A832CCE4C00F7CB02BFA7488 /* Debug */,
+				C2C3AD6A65FBEB5F9771A2C4ED3615D4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		46921981F609C5BA3CB72EC4EA41299D /* Build configuration list for PBXAggregateTarget "GoogleMaps" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4AA46832D8A16AA4E4811383B204D2A4 /* Debug */,
+				C7565AEA7FCD8F66CAF546DC5AF1404F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		480B55FE3ACCAC83A30949D59053CFBD /* Build configuration list for PBXAggregateTarget "GooglePlaces" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6CEFD4A0FF7D85887390E5ED002003D0 /* Debug */,
+				C9C8B7A5C0A2BC3DC7FEE5F90BE94C77 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				916E0404255105F480DC4950B7625F7A /* Debug */,
+				8F17DC3A99F99FBAD606CE6963886315 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		543AFABDB667AF073C3569847B1008C0 /* Build configuration list for PBXNativeTarget "ActionSheetPicker-3.0" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A2F13F5A4D037FD926C14D8AFA31443F /* Debug */,
+				EE1CE3111D33F30F348BBC6FC9C45099 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B4C19445312324B2FC829685DE007C84 /* Build configuration list for PBXAggregateTarget "GooglePlacePicker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				595DD5539089161955FE3C7084B0C9B2 /* Debug */,
+				2C1C4625A069FBBE1AA822F8E0C646B8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}
