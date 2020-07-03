@@ -1,4 +1,4 @@
-// Copyright (c) 2014–2015 Mattt Thompson (http://mattt.me)
+// Copyright © 2014-2019 the Surge contributors
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -18,30 +18,37 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-import Accelerate
+import Foundation
 
-// MARK: Power
+// MARK: - Element-wise Addition
 
-public func pow(_ x: [Float], y: [Float]) -> [Float] {
-    var results = [Float](repeating: 0.0, count: x.count)
-    vvpowf(&results, x, y, [Int32(x.count)])
+infix operator .+: AdditionPrecedence
+infix operator .+=: AssignmentPrecedence
 
-    return results
-}
+// MARK: - Element-wise Subtraction
 
-public func pow(_ x: [Double], y: [Double]) -> [Double] {
-    var results = [Double](repeating: 0.0, count: x.count)
-    vvpow(&results, x, y, [Int32(x.count)])
+infix operator .-: AdditionPrecedence
+infix operator .-=: AssignmentPrecedence
 
-    return results
-}
+// MARK: - Element-wise Multiplication
 
-public func pow(_ x: [Float], _ y: Float) -> [Float] {
-    let yVec = [Float](repeating: y, count: x.count)
-    return pow(yVec, y: x)
-}
+infix operator .*: MultiplicationPrecedence
+infix operator .*=: AssignmentPrecedence
 
-public func pow(_ x: [Double], _ y: Double) -> [Double] {
-    let yVec = [Double](repeating: y, count: x.count)
-    return pow(yVec, y: x)
-}
+// MARK: - Element-wise Division
+
+infix operator ./: MultiplicationPrecedence
+infix operator ./=: AssignmentPrecedence
+
+// MARK: - Element-wise Modulo
+
+infix operator .%: MultiplicationPrecedence
+infix operator .%=: AssignmentPrecedence
+
+// MARK: - Dot product
+
+infix operator •: MultiplicationPrecedence
+
+// MARK: - Matrix Transpose
+
+postfix operator ′
