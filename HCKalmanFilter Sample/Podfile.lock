@@ -1,5 +1,5 @@
 PODS:
-  - ActionSheetPicker-3.0 (2.2.0)
+  - ActionSheetPicker-3.0 (2.5.0)
   - GoogleMaps (3.1.0):
     - GoogleMaps/Maps (= 3.1.0)
   - GoogleMaps/Base (3.1.0)
@@ -13,7 +13,7 @@ PODS:
   - Surge (2.3.0)
 
 DEPENDENCIES:
-  - ActionSheetPicker-3.0 (~> 2.2.0)
+  - ActionSheetPicker-3.0 (~> 2.5.0)
   - GoogleMaps
   - GooglePlacePicker
   - GooglePlaces
@@ -28,12 +28,12 @@ SPEC REPOS:
     - Surge
 
 SPEC CHECKSUMS:
-  ActionSheetPicker-3.0: d11a4c12c6aaf704b8a3f56d179198c99f3e41e6
+  ActionSheetPicker-3.0: 6d79f6f3b98e2b21d218dd65a39f634ff37a27e5
   GoogleMaps: 5c13302e6fe6bb6e686b267196586b91cd594225
   GooglePlacePicker: fa975116ac202ac29822c0a79758ea1c4db5a95f
   GooglePlaces: e874db179f2675c4f3eeda0b686b540273a578b0
   Surge: 13979cd9593e943f9ce1202439da2999ea57e46d
 
-PODFILE CHECKSUM: c2adc771ed38042394d31ed662b2212748c7231d
+PODFILE CHECKSUM: c30d8b3f435689a477bdecd1c94c22181f91534c
 
 COCOAPODS: 1.8.4

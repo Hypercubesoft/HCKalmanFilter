@@ -7,7 +7,7 @@ target 'HCKalmanFilter Sample' do
     pod 'GooglePlaces'
     pod 'GooglePlacePicker'
     
-    pod 'ActionSheetPicker-3.0', '~> 2.2.0'
+    pod 'ActionSheetPicker-3.0', '~> 2.5.0'
 
     pod 'Surge', '~> 2.3'
     
