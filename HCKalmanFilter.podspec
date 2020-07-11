@@ -17,6 +17,6 @@ s.source           = { :git => "https://github.com/Hypercubesoft/HCKalmanFilter.
 s.ios.deployment_target = "9.0"
 s.source_files = "HCKalmanFilter/*"
 
-s.dependency 'Surge', '~> 2.0.0'
+s.dependency 'Surge', '~> 2.3'
 
 end

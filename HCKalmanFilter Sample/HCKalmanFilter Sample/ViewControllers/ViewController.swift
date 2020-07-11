@@ -60,7 +60,7 @@ class ViewController: UIViewController {
         AppNotify.removeObserver(self)
     }
     
-    func locationUpdated()
+    @objc func locationUpdated()
     {
         isLocationSet = true
         
