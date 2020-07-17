@@ -173,7 +173,7 @@ class HCMatrixObject
     {
         let result = HCMatrixObject(rows: left.rows, columns: left.columns)
         
-        result.matrix = Surge.add(left.matrix, y: right.matrix)
+        result.matrix = Surge.add(left.matrix, right.matrix)
         
         return result
     }
@@ -214,7 +214,7 @@ class HCMatrixObject
     /// - returns: result HCMatrixObject object of multiplication operation
     static func *(left:HCMatrixObject, right:HCMatrixObject) -> HCMatrixObject?
     {
-        let resultMatrix = Surge.mul(left.matrix, y: right.matrix)
+        let resultMatrix = Surge.mul(left.matrix, right.matrix)
         
         let result = HCMatrixObject(rows: resultMatrix.rows,columns: resultMatrix.columns)
         result.matrix = resultMatrix
@@ -222,4 +222,3 @@ class HCMatrixObject
         return result
     }
 }
-

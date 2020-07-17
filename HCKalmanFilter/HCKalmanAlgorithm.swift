@@ -241,8 +241,8 @@ open class HCKalmanAlgorithm
         let lon = xk1.matrix[2,0]
         let altitude = xk1.matrix[4,0]
         
-        let kalmanCLLocation = CLLocation(coordinate: CLLocationCoordinate2D(latitude: lat,longitude: lon), altitude: altitude, horizontalAccuracy: self.previousLocation.horizontalAccuracy, verticalAccuracy: self.previousLocation.verticalAccuracy, timestamp: previousMeasureTime)
-        
+        let kalmanCLLocation = CLLocation(coordinate: CLLocationCoordinate2D(latitude: lat,longitude: lon), altitude: altitude, horizontalAccuracy: self.previousLocation.horizontalAccuracy, verticalAccuracy: self.previousLocation.verticalAccuracy, course:self.previousLocation.course, speed:self.previousLocation.speed, timestamp: previousMeasureTime)
+
         return kalmanCLLocation
     }
 }
