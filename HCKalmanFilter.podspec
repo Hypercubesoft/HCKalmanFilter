@@ -1,6 +1,5 @@
 Pod::Spec.new do |s|
 
-s.platform = :ios
 s.name             = "HCKalmanFilter"
 s.version          = "1.2.2"
 s.summary          = "HCKalmanFilter is Swift implementation of Kalman filter algorithm intended to solve problem with GPS tracking"
@@ -15,8 +14,10 @@ s.author           = { "Hypercubesoft" => "office@hypercubesoft.com" }
 s.source           = { :git => "https://github.com/Hypercubesoft/HCKalmanFilter.git", :tag => "#{s.version}"}
 
 s.ios.deployment_target = "9.0"
+s.watchos.deployment_target = '3.0'
+
 s.source_files = "HCKalmanFilter/*"
 
-s.dependency 'Surge', '~> 2.0.0'
+s.dependency 'Surge', '~> 2.3.2'
 
 end
